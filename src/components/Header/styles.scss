@@ -1,0 +1,75 @@
+/** @format */
+@import "../../styles/common.scss";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding-medium);
+  background: transparent;
+
+  &--followus {
+    position: fixed;
+    transform: rotate(-90deg);
+    top: 50%;
+    right: -3%;
+    @media only screen and (max-width: 600px) {
+      right: -25%;
+    }
+    h4 {
+      font-size: 1.6rem;
+      color: #fff;
+      line-height: 2.4rem;
+    }
+  }
+  &--menu {
+    display: flex;
+    align-items: center;
+    z-index: 200;
+
+    h3 {
+      font-size: 2.5rem;
+      margin-left: var(--margin-medium);
+      color: #fff;
+    }
+    .dark {
+      color: var(--black-color-1);
+    }
+  }
+  &--button {
+    z-index: 200;
+    button {
+      background: var(--black-color-1);
+      color: #fff;
+      border-radius: 3px;
+      border: 0;
+      padding: 5px var(--padding-small);
+      font-size: 1.6rem;
+      cursor: pointer;
+      &:hover {
+        animation-name: bgTransparent;
+        animation-duration: 1s;
+      }
+    }
+  }
+  .toggle-menu-button {
+    background: transparent;
+    border: 0;
+    font-size: 2rem;
+    transform: rotate(90deg);
+    color: #fff;
+    cursor: pointer;
+  }
+  .dark_background {
+    color: black;
+  }
+}
+
+@keyframes bgTransparent {
+  from {
+    background: var(--black-color-1);
+  }
+  to {
+    background: transparent;
+  }
+}

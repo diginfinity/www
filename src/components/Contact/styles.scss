@@ -1,0 +1,117 @@
+/** @format */
+
+@import "../../styles/common.scss";
+
+.contact {
+  width: 70%;
+  margin: auto;
+  padding: var(--padding-large) 0;
+  @media only screen and (max-width: 600px) {
+    width: 90%;
+  }
+  h1 {
+    font-size: 7.2rem;
+    font-weight: bold;
+    padding-bottom: var(--padding-medium);
+    color: var(--black-color-1);
+  }
+  p {
+    font-size: 1.6rem;
+    color: var(--black-color-4);
+    padding-bottom: var(--padding-medium);
+  }
+  button {
+    background: var(--red-color-1);
+    color: #fff;
+    padding: var(--padding-small);
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+}
+
+.div-flex {
+  display: flex;
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+  }
+  &--1 {
+    flex: 1;
+    text-align: center;
+    @media only screen and (max-width: 600px) {
+      height: 400px;
+    }
+  }
+  &--2 {
+    flex: 1;
+    display: flex;
+    @media only screen and (max-width: 400px) {
+      flex-direction: column;
+    }
+
+    .item {
+      &--1 {
+        background: var(--black-color-1);
+        padding: var(--padding-large);
+        flex: 1;
+        @media only screen and (max-width: 600px) {
+          padding: var(--padding-medium);
+        }
+      }
+      &--2 {
+        background: var(--main-black-color);
+        padding: var(--padding-large);
+        flex: 1;
+        @media only screen and (max-width: 600px) {
+          padding: var(--padding-medium);
+        }
+      }
+    }
+  }
+}
+
+.information {
+  h3 {
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: bold;
+    padding: var(--padding-medium) 0;
+  }
+  &--grey {
+    color: var(--light-grey-color-2);
+    font-size: 1.4rem;
+    padding: var(--padding-medium) 0;
+  }
+  &--info {
+    p {
+      font-size: 1.4rem;
+      color: #fff;
+      font-weight: bold;
+    }
+  }
+  &--info-2 {
+    line-height: 20px;
+    p {
+      font-size: 1.4rem;
+      color: #fff;
+      &:first-child {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.iconHolder {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+
+  .icon-icon {
+    color: #fff;
+  }
+}

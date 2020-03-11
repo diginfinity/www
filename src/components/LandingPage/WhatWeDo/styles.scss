@@ -1,0 +1,62 @@
+/** @format */
+@import "../../../styles/common.scss";
+
+.whatwedo {
+  &--wrapper {
+    display: flex;
+    margin: 0 auto;
+    padding: var(--padding-extra-large) 0;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    @media only screen and (max-width: 600px) {
+      width: 95%;
+      flex-direction: column;
+    }
+    &--1 {
+      // width: 35%;
+      width: 50%;
+      margin-right: var(--margin-medium);
+      @media only screen and (max-width: 600px) {
+        width: 95%;
+        margin: 0;
+      }
+      h4 {
+        border-bottom: 1px solid var(--border-color);
+        padding: var(--padding-small) 0;
+        color: #fff;
+        font-size: 1.6rem;
+      }
+      h1 {
+        font-size: 4rem;
+        color: #fff;
+        margin-top: var(--margin-medium);
+        line-height: 54px;
+      }
+    }
+    &--2 {
+      // width: 35%;
+      width: 50%;
+      align-self: flex-start;
+      padding-top: var(--padding-small);
+      margin-left: var(--margin-medium);
+      @media only screen and (max-width: 600px) {
+        width: 95%;
+        margin: 3rem 0 0 0;
+      }
+      p {
+        font-size: 1.6rem;
+        color: var(--light-grey-color-2);
+        line-height: 2.2rem;
+      }
+    }
+  }
+  &--items {
+    display: flex;
+    position: relative;
+    @media only screen and (max-width: 600px) {
+      flex-direction: column;
+      height: 100rem;
+    }
+  }
+}

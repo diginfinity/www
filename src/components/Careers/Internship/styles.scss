@@ -1,0 +1,52 @@
+/** @format */
+
+.internship {
+  background: var(--main-black-color);
+  &--container {
+    width: 70%;
+    margin: 0 auto;
+    padding: var(--padding-large) 0;
+    &--flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .flex--item--1 {
+        p {
+          font-size: 1.6rem;
+          color: #fff;
+          line-height: 2.2rem;
+          padding-bottom: var(--padding-small);
+        }
+        h1 {
+          font-size: 4rem;
+          line-height: 5.4rem;
+          color: #fff;
+        }
+      }
+      .flex--item--2 {
+        button {
+          font-size: 1.6rem;
+          font-weight: bold;
+          line-height: 2.4rem;
+          color: #fff;
+          border-radius: 3px;
+          border: 0;
+          background: var(--red-color-1);
+          padding: 0.5rem 1rem;
+          cursor: pointer;
+        }
+      }
+    }
+    &--text {
+      margin-top: var(--margin-medium);
+      border-top: 1px solid var(--border-color);
+      padding: var(--padding-medium) 0;
+      p {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        color: #fff;
+      }
+    }
+  }
+}

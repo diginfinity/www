@@ -1,0 +1,107 @@
+/** @format */
+
+@import "../../styles/common.scss";
+
+.footer {
+  background: var(--black-color-1);
+  @media only screen and (max-width: 600px) {
+    z-index: 250;
+  }
+  &--container {
+    padding-top: var(--padding-extra-large);
+    @media only screen and (max-width: 600px) {
+      padding-top: var(--padding-large);
+    }
+    &--wrapper {
+      width: 70%;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      @media only screen and (max-width: 600px) {
+        width: 90%;
+        flex-direction: column;
+      }
+      &--grid {
+        flex: 2;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 3rem;
+        @media only screen and (max-width: 600px) {
+          grid-template-columns: 1fr;
+        }
+        .logo {
+          color: #fff;
+          font-size: 30px; // TO BE REMOVED
+        }
+        .grid-el {
+          line-height: 22px;
+          p {
+            color: #fff;
+            font-size: 1.6rem;
+          }
+          .city {
+            color: var(--light-grey-color-2);
+            font-size: 1.6rem;
+            margin-bottom: var(--margin-medium);
+            @media only screen and (max-width: 600px) {
+              margin-bottom: var(--margin-small);
+            }
+          }
+        }
+      }
+      &--flex {
+        flex: 1;
+
+        .flex--item {
+          &:first-child {
+            margin-top: 0;
+          }
+          margin: var(--margin-big);
+          @media only screen and (max-width: 600px) {
+            margin: 0;
+          }
+
+          .info {
+            color: var(--light-grey-color-2);
+            font-size: 1.6rem;
+            margin-bottom: var(--margin-medium);
+          }
+          .bold {
+            color: #fff;
+            font-size: 1.6rem;
+            font-weight: bold;
+          }
+          p {
+            color: #fff;
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+  }
+  &--rights {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border-color-light);
+    width: 70%;
+    margin: auto;
+    margin-top: var(--margin-medium);
+    padding: var(--padding-big) 0;
+    @media only screen and (max-width: 600px) {
+      width: 90%;
+    }
+
+    p {
+      color: var(--light-grey-color-2);
+      font-size: 1.4rem;
+      padding-top: var(--padding-small);
+    }
+  }
+}
+
+.hide-on-small-devices {
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
+}

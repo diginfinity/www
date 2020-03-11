@@ -1,0 +1,61 @@
+/** @format */
+@import "../../../styles/common.scss";
+
+.clients {
+  padding: var(--padding-extra-large) 0;
+  background: var(--main-black-color);
+  &--wrapper {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    @media only screen and (max-width: 600px) {
+      width: 95%;
+      flex-direction: column;
+    }
+
+    &--1 {
+      margin-right: var(--margin-medium);
+      width: 50%;
+      @media only screen and (max-width: 600px) {
+        width: 100%;
+        margin: 0;
+      }
+      h4 {
+        border-bottom: 1px solid var(--border-color);
+        padding: var(--padding-small) 0;
+        color: #fff;
+        font-size: 1.6rem;
+      }
+      h1 {
+        font-size: 4rem;
+        color: #fff;
+        margin-top: var(--margin-medium);
+      }
+    }
+    &--2 {
+      width: 50%;
+      align-self: flex-start;
+      padding-top: var(--padding-small);
+      margin-left: var(--margin-medium);
+      @media only screen and (max-width: 600px) {
+        width: 100%;
+        margin: 3rem 0 0 0;
+      }
+      p {
+        font-size: 1.6rem;
+        color: var(--light-grey-color-2);
+      }
+      .logo-holder {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        @media only screen and (max-width: 600px) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        align-items: center;
+        img {
+          padding: var(--padding-medium);
+        }
+      }
+    }
+  }
+}

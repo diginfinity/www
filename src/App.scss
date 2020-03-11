@@ -1,0 +1,32 @@
+/** @format */
+
+@font-face {
+  font-family: "Space-Grotesk";
+  src: local("SpaceGrotesk"),
+    url(./assets/fonts/SpaceGrotesk-Bold.woff) format("woff");
+}
+@font-face {
+  font-family: "Space-Grotesk";
+  src: local("SpaceGrotesk"),
+    url(./assets/fonts/SpaceGrotesk-Regular.woff) format("woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Space-Grotesk";
+  font-weight: normal;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+#root {
+  // width: 100%;
+  overflow: hidden;
+}
