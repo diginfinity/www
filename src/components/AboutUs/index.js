@@ -48,7 +48,31 @@ const AboutUs = () => {
         <div className="aboutus--employees--section">
           <div className="aboutus--employees--section--flex">
             <div className="aboutus--employees--section--flex--1">
+              <div className="aboutus--employees--section--flex--title">
+              <div className="figure">
+              <div className="figure--wrapper">
+                <span className="figure--wrapper--dots" />
+                <span className="figure--wrapper--dots" />
+                <span className="figure--wrapper--dots" />
+              </div>
+              <div className="figure--wrapper">
+                <span className="figure--wrapper--dots" />
+                <span className="figure--wrapper--dots" />
+                <span className="figure--wrapper--dots" />
+              </div>
+              <div className="figure--wrapper">
+                <span className="figure--wrapper--dots" />
+                <span className="figure--wrapper--dots" />
+                <span className="figure--wrapper--dots" />
+              </div>
+              <div className="figure--wrapper">
+                <span className="figure--wrapper--transparent" />
+                <span className="figure--wrapper--dots" />
+                <span className="figure--wrapper--transparent" />
+              </div>
+            </div>
               <h1>30+</h1>
+              </div>
               <p className="bold">
                 Employees and <br /> counting
               </p>
@@ -61,7 +85,31 @@ const AboutUs = () => {
               </p>
             </div>
             <div className="aboutus--employees--section--flex--2">
+            <div className="aboutus--employees--section--flex--title">
+              <div className="figure">
+              <div className="figure--wrapper">
+                <span className="figure--wrapper--dots" />
+                <span className="figure--wrapper--dots" />
+                <span className="figure--wrapper--dots" />
+              </div>
+              <div className="figure--wrapper">
+                <span className="figure--wrapper--dots" />
+                <span className="figure--wrapper--dots" />
+                <span className="figure--wrapper--dots" />
+              </div>
+              <div className="figure--wrapper">
+                <span className="figure--wrapper--dots" />
+                <span className="figure--wrapper--dots" />
+                <span className="figure--wrapper--dots" />
+              </div>
+              <div className="figure--wrapper">
+                <span className="figure--wrapper--transparent" />
+                <span className="figure--wrapper--dots" />
+                <span className="figure--wrapper--transparent" />
+              </div>
+            </div>
               <h1>200+</h1>
+              </div>
               <p className="bold">
                 Succeeded <br /> Projects
               </p>

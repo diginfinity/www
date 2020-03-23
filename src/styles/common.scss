@@ -34,4 +34,45 @@
   --margin-big: 3rem;
   --margin-large: 5rem;
   --margin-extra-large: 10rem;
+
+  //width
+  --width-content: 70%;
+  @media only screen and (max-width: 600px) {
+    --width-content: 90%;
+    // margin: 0;
+  }
+
+  //breakpoints
+  --phone: 480px;
+  --tablet-portrait: 768px;
+  --tablet-landscape: 992px;
+  --big-screen: 1200px;
+}
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 480px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 992px) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-screen {
+    @media only screen and (max-width: 1200px) {
+      @content;
+    }
+  }
+  @if $breakpoint == large-screen {
+    @media only screen and (min-width: 1200px) {
+      @content;
+    }
+  }
 }

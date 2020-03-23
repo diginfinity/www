@@ -6,11 +6,8 @@
   width: 100%;
   padding: var(--padding-extra-large) 0;
   &--title {
-    width: 70%;
+    width: var(--width-content);
     margin: 0 auto;
-    @media only screen and (max-width: 600px) {
-      width: 90%;
-    }
     p {
       color: #fff;
       font-size: 1.6rem;

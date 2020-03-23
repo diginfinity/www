@@ -1,24 +1,38 @@
 /** @format */
 
 import React, { useState } from "react";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import "./styles.scss";
 
-const Menu = ({ closeModal }) => {
+const Menu = ({ closeModal, isOpen }) => {
   const [tabClicked, setTabClicked] = useState(false);
+  console.log("1232132", isOpen);
   return (
-    <div className="hamburgerMenu">
+    <div
+      className={
+        isOpen
+          ? "hamburgerMenu hamburgerMenu--open"
+          : "hamburgerMenu hamburgerMenu--close"
+      }>
       <div className="hamburgerMenu--button">
-        <button onClick={closeModal}>x</button>
+        <button onClick={closeModal}>
+          <FontAwesomeIcon icon={faTimes} />
+        </button>
       </div>
       <div className="nav">
         <Link to="/">
-          <h1>
+          <h1 className="nav--item-animate">
             <sup>01</sup>Home
           </h1>
         </Link>
         <div className="nav--about">
-          <h1 onClick={() => setTabClicked(true)} className={tabClicked ? "tabClicked" : ""}>
+          <h1
+            onClick={() => setTabClicked(true)}
+            className={
+              tabClicked ? "nav--item-animate tabClicked" : "nav--item-animate"
+            }>
             <sup>02</sup>About
           </h1>
           <p className="nav--about--expand" onClick={() => setTabClicked(true)}>
@@ -36,12 +50,12 @@ const Menu = ({ closeModal }) => {
           )}
         </div>
         <Link to="/contact">
-          <h1>
+          <h1 className="nav--item-animate">
             <sup>03</sup>Contact us
           </h1>
         </Link>
         <Link to="/careers">
-          <h1>
+          <h1 className="nav--item-animate">
             <sup>04</sup>Careers
           </h1>
         </Link>

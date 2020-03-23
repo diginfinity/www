@@ -38,8 +38,11 @@ const LandingPage = () => {
 
         <div className="landingPage--cookies">
           <div>
-            We use cookies to give you the best experience.{" "}
-            <h3>Cookie Policy</h3>
+            <p>
+              {" "}
+              We use cookies to give you the best experience.{" "}
+              <span>Cookie Policy</span>
+            </p>
           </div>
         </div>
       </div>

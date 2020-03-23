@@ -1,9 +1,12 @@
 /** @format */
 
 .careers {
-  width: 70%;
+  width: var(--width-content);
   margin: 0 auto;
   padding: var(--padding-large) 0;
+  @media only screen and (max-width: 600px) {
+    padding: var(--padding-big) 0;
+  }
   h1 {
     font-size: 7.2rem;
     font-weight: bold;
@@ -35,6 +38,9 @@
       display: flex;
       bottom: 0;
       left: 15%;
+      @media only screen and (max-width: 600px) {
+        left: 0;
+      }
       &--abs1 {
         background: var(--red-color-1);
         padding: var(--padding-big);
@@ -75,7 +81,7 @@
   }
 }
 .join-our-team {
-  width: 70%;
+  width: var(--width-content);
   margin: 0 auto;
   padding: var(--padding-large) 0;
   p {
@@ -94,6 +100,10 @@
   display: flex;
   height: 500px;
   overflow: hidden;
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+    height: auto;
+  }
   &--bgimg {
     flex: 6;
     margin: auto 0;
@@ -105,35 +115,50 @@
   &--positions {
     background: var(--light-grey-color-1);
     flex: 4;
-    padding: 60px;
-    height: 100%;
-    h1 {
-      font-size: 4rem;
-      font-weight: bold;
-      padding-bottom: var(--padding-medium);
+    padding: var(--padding-large);
+    @media only screen and (max-width: 600px) {
+      padding: var(--padding-large) 0;
     }
-    p {
-      font-size: 1.6rem;
-      line-height: 3rem;
-      padding-bottom: var(--padding-medium);
-      &:last-child {
-        padding-bottom: 0;
+    height: 100%;
+    &--text {
+      @media only screen and (max-width: 600px) {
+        width: 90%;
+        margin: auto;
+      }
+      h1 {
+        font-size: 4rem;
+        font-weight: bold;
+        padding-bottom: var(--padding-medium);
+      }
+      p {
+        font-size: 1.6rem;
+        line-height: 3rem;
+        padding-bottom: var(--padding-medium);
+        &:last-child {
+          padding-bottom: 0;
+        }
       }
     }
   }
 }
 
 .open--positions {
-  width: 70%;
+  width: var(--width-content);
   margin: 0 auto;
   padding: var(--padding-extra-large) 0;
+  @media only screen and (max-width: 600px) {
+    margin: auto;
+  }
 }
 
 .hr {
-  width: 70%;
+  width: var(--width-content);
   margin: 0 auto;
   padding: var(--padding-large) 0;
   border-top: 1px solid var(--border-color);
+  @media only screen and (max-width: 600px) {
+    margin: auto;
+  }
   &--flex-container {
     display: flex;
     align-items: center;
@@ -164,6 +189,7 @@
     }
     &--contact {
       text-align: right;
+      z-index: 500;
       p {
         font-size: 1.6rem;
         line-height: 2.2rem;

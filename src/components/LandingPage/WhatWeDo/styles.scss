@@ -8,17 +8,17 @@
     padding: var(--padding-extra-large) 0;
     justify-content: center;
     align-items: center;
-    width: 70%;
-    @media only screen and (max-width: 600px) {
-      width: 95%;
+    width: var(--width-content);
+    @include responsive(tab-port) {
       flex-direction: column;
+      align-items: flex-start;
     }
     &--1 {
       // width: 35%;
       width: 50%;
       margin-right: var(--margin-medium);
-      @media only screen and (max-width: 600px) {
-        width: 95%;
+      @include responsive(tab-port) {
+        width: 100%;
         margin: 0;
       }
       h4 {
@@ -31,17 +31,16 @@
         font-size: 4rem;
         color: #fff;
         margin-top: var(--margin-medium);
-        line-height: 54px;
+        line-height: 5.5rem;
       }
     }
     &--2 {
-      // width: 35%;
       width: 50%;
       align-self: flex-start;
       padding-top: var(--padding-small);
       margin-left: var(--margin-medium);
-      @media only screen and (max-width: 600px) {
-        width: 95%;
+      @include responsive(tab-port) {
+        width: 100%;
         margin: 3rem 0 0 0;
       }
       p {
@@ -54,7 +53,7 @@
   &--items {
     display: flex;
     position: relative;
-    @media only screen and (max-width: 600px) {
+    @include responsive(tab-port) {
       flex-direction: column;
       height: 100rem;
     }

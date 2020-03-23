@@ -9,23 +9,33 @@
     background-position: center;
   }
   &--container {
-    width: 70%;
+    width: var(--width-content);
     margin: 0 auto;
     padding-top: var(--padding-big);
     padding-bottom: var(--padding-extra-large);
-
     &--flex {
       display: flex;
 
       &:first-child {
         padding-bottom: var(--padding-large);
+        @media only screen and (max-width: 600px) {
+          padding-bottom: var(--padding-medium);
+        }
       }
-
+      &:last-child {
+        @media only screen and (max-width: 600px) {
+          flex-direction: column;
+        }
+      }
       .flex--item {
         flex: 1;
         &:first-child {
           div {
             width: 70%;
+            @media only screen and (max-width: 600px) {
+              width: 100%;
+              padding-bottom: var(--padding-big);
+            }
             p {
               padding-bottom: var(--padding-big);
             }
@@ -40,6 +50,9 @@
             width: 70%;
             margin: 0 auto;
             line-height: 3rem;
+            @media only screen and (max-width: 600px) {
+              width: 100%;
+            }
             p {
               font-size: 1.6rem;
               color: var(--black-color-4);
@@ -55,9 +68,12 @@
     }
   }
   &--awards {
-    width: 70%;
+    width: var(--width-content);
     margin: 0 auto;
     padding: var(--padding-extra-large) 0;
+    @media only screen and (max-width: 600px) {
+      padding: var(--padding-large) 0;
+    }
     &--flex {
       display: flex;
       align-items: flex-start;
@@ -84,6 +100,10 @@
         .awards {
           display: flex;
           padding-top: var(--padding-large);
+          @media only screen and (max-width: 600px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+          }
           div {
             p {
               padding-top: var(--padding-big);
@@ -96,12 +116,16 @@
   &--project {
     background: var(--light-grey-color-1);
     padding: var(--padding-extra-large) 0;
+    @media only screen and (max-width: 600px) {
+      padding: var(--padding-large) 0;
+    }
     &--wrapper {
-      width: 70%;
+      width: var(--width-content);
       margin: 0 auto;
       &--flex {
         display: flex;
         justify-content: space-between;
+
         div {
           p {
             font-size: 1.6rem;
@@ -156,16 +180,47 @@
       }
     }
     &--section {
-      width: 70%;
+      width: var(--width-content);
       margin: 0 auto;
       padding: var(--padding-extra-large) 0;
       &--flex {
         display: flex;
+        justify-content: space-around;
+        &--title {
+          display: flex;
+          align-items: center;
+          .figure {
+            margin: 0;
+            &--wrapper {
+              display: flex;
+              margin: 0 0 2px 0;
+              &--dots {
+                content: "";
+                width: 6px;
+                height: 6px;
+                background: red;
+                display: block;
+                margin: 0 2px;
+                border-radius: 50%;
+              }
+              &--transparent {
+                content: "";
+                width: 6px;
+                height: 6px;
+                background: transparent;
+                display: block;
+                margin: 0 2px;
+                border-radius: 50%;
+              }
+            }
+          }
+        }
         div {
           h1 {
             font-size: 4rem;
             font-weight: bold;
             color: var(--black-color-1);
+            margin: 0 0 0 var(--margin-medium);
           }
           .bold {
             font-size: 1.6rem;
@@ -182,9 +237,6 @@
             font-size: inherit;
             color: var(--color-black-1);
             font-weight: bold;
-          }
-          &:last-child {
-            margin-left: var(--margin-extra-large);
           }
         }
       }

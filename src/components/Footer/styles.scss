@@ -13,12 +13,11 @@
       padding-top: var(--padding-large);
     }
     &--wrapper {
-      width: 70%;
+      width: var(--width-content);
       margin: auto;
       display: flex;
       justify-content: space-between;
       @media only screen and (max-width: 600px) {
-        width: 90%;
         flex-direction: column;
       }
       &--grid {
@@ -34,7 +33,7 @@
           font-size: 30px; // TO BE REMOVED
         }
         .grid-el {
-          line-height: 22px;
+          line-height: 2.2rem;
           p {
             color: #fff;
             font-size: 1.6rem;

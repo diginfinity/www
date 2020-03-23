@@ -55,41 +55,45 @@ const Reviews = () => {
   };
   useEffect(() => {
     setTimeout(() => {
-      if(review !== reviews.length - 1){
-        return setReview(review + 1)
-      }else if(review === reviews.length -1){
-        return setReview(0)
+      if (review !== reviews.length - 1) {
+        return setReview(review + 1);
+      } else if (review === reviews.length - 1) {
+        return setReview(0);
       }
-    }, 5000)
-  }, [review])
+    }, 5000);
+  }, [review]);
   return (
     <div className="reviews">
       <div className="reviews--wrapper">
         <div className="reviews--wrapper--review">
           <div className="reviews--wrapper--review--opacity" />
-          <div className="reviews--wrapper--review--container">
-            <img src={reviews[review].image} alt="happy_customer" />
-            <h4 className="title">{reviews[review].title}</h4>
-            <p className="text">{reviews[review].text}</p>
-            <div>
-              <h4 className="name">{reviews[review].name}</h4>
-              <h4 className="working_title">{reviews[review].workingTitle}</h4>
-            </div>
-            <div className="slider">
-              <div className="slider--number">
-                <p>{review + 1}</p>
-                <div>
-                  <hr />
-                </div>
-                <p>{reviews.length}</p>
+          <div className="reviews--wrapper-review--flex">
+            <div className="reviews--wrapper--review--flex--container">
+              <img src={reviews[review].image} alt="happy_customer" />
+              <h4 className="title">{reviews[review].title}</h4>
+              <p className="text">{reviews[review].text}</p>
+              <div>
+                <h4 className="name">{reviews[review].name}</h4>
+                <h4 className="working_title">
+                  {reviews[review].workingTitle}
+                </h4>
               </div>
-              <div className="slider--buttons">
-                <button name="down" onClick={() => handleSlider("down")}>
-                  <FontAwesomeIcon icon={faArrowLeft} />
-                </button>
-                <button name="up" onClick={() => handleSlider("up")}>
-                  <FontAwesomeIcon icon={faArrowRight} />
-                </button>
+              <div className="slider">
+                <div className="slider--number">
+                  <p>{review + 1}</p>
+                  <div>
+                    <hr />
+                  </div>
+                  <p>{reviews.length}</p>
+                </div>
+                <div className="slider--buttons">
+                  <button name="down" onClick={() => handleSlider("down")}>
+                    <FontAwesomeIcon icon={faArrowLeft} />
+                  </button>
+                  <button name="up" onClick={() => handleSlider("up")}>
+                    <FontAwesomeIcon icon={faArrowRight} />
+                  </button>
+                </div>
               </div>
             </div>
           </div>

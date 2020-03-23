@@ -3,12 +3,9 @@
 @import "../../styles/common.scss";
 
 .contact {
-  width: 70%;
+  width: var(--width-content);
   margin: auto;
   padding: var(--padding-large) 0;
-  @media only screen and (max-width: 600px) {
-    width: 90%;
-  }
   h1 {
     font-size: 7.2rem;
     font-weight: bold;
@@ -91,7 +88,7 @@
     }
   }
   &--info-2 {
-    line-height: 20px;
+    line-height: 2rem;
     p {
       font-size: 1.4rem;
       color: #fff;

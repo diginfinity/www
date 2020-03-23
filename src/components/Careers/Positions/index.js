@@ -19,7 +19,9 @@ const Positions = props => {
     <div className="position--container">
       <div className="position--container--flex">
         <div>
-          <button onClick={() => setShowMore(!showMore)}>+</button>
+          <button onClick={() => setShowMore(!showMore)}>
+            {showMore ? "-" : "+"}
+          </button>
           <h4>{title}</h4>
         </div>
         <button>Apply</button>

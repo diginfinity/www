@@ -23,7 +23,12 @@
       font-size: 9rem;
       line-height: 9.2rem;
       color: #fff;
-      @media only screen and (max-width: 600px) {
+
+      @include responsive(tab-port) {
+        font-size: 6rem;
+        line-height: 6.2rem;
+      }
+      @include responsive(phone) {
         font-size: 4rem;
         line-height: 4.2rem;
       }
@@ -39,7 +44,17 @@
       color: #fff;
       margin-top: var(--margin-large);
       font-size: 1.6rem;
+      transition: all 0.5s;
       cursor: pointer;
+
+      &:hover {
+        color: black;
+        font-weight: bold;
+      }
+      &:hover > .icon-right {
+        animation-name: animateArrow;
+        animation-duration: 1s;
+      }
 
       .icon-right {
         margin-left: var(--margin-small);
@@ -78,12 +93,14 @@
       display: flex;
       align-items: center;
       padding: var(--padding-small);
-      font-size: 1.6rem;
-      // z-index: 200;
-      h3 {
-        color: var(--black-color-3);
-        margin-left: 5px;
+      p {
         font-size: 1.6rem;
+        color: var(--black-color-3);
+        span {
+          font-size: inherit;
+          color: inherit;
+          font-weight: bold;
+        }
       }
     }
   }
@@ -91,4 +108,13 @@
 
 .dark-background {
   background: var(--main-black-color);
+}
+
+@keyframes animateArrow {
+  from {
+    margin-left: 0;
+  }
+  to {
+    margin-left: 20px;
+  }
 }

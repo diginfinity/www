@@ -33,12 +33,9 @@ const Header = ({ dark }) => {
       <div className="header--button">
         <button>Get a Quote</button>
       </div>
-      {hamburgerMenu && (
-        <HamburgerMenu id="hamburger-menu">
-          <Menu closeModal={closeModal} />
-          {/* {Menu({closeModal:closeModal})} */}
-        </HamburgerMenu>
-      )}
+      <HamburgerMenu id="hamburger-menu">
+        <Menu isOpen={hamburgerMenu} closeModal={closeModal} />
+      </HamburgerMenu>
     </div>
   );
 };
