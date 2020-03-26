@@ -7,6 +7,19 @@
   align-items: center;
   padding: var(--padding-medium);
   background: transparent;
+  box-sizing: border-box;
+  width: 100%;
+  position: fixed;
+  &--hide {
+    visibility: hidden;
+    transition: all 200ms ease-out;
+    transform: translate(0, -100%);
+  }
+  &--show {
+    visibility: visible;
+    transition: all 200ms ease-in;
+    transform: none;
+  }
 
   &--followus {
     position: fixed;
@@ -20,6 +33,11 @@
       font-size: 1.6rem;
       color: #fff;
       line-height: 2.4rem;
+      a {
+        color: inherit;
+        font-size: inherit;
+        text-decoration: none;
+      }
     }
   }
   &--menu {
@@ -45,10 +63,12 @@
       border: 0;
       padding: 5px var(--padding-small);
       font-size: 1.6rem;
+      outline: none;
       cursor: pointer;
       &:hover {
         animation-name: bgTransparent;
         animation-duration: 1s;
+        outline: none;
       }
     }
   }

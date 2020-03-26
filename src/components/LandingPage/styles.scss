@@ -79,31 +79,6 @@
       background: none;
     }
   }
-  &--cookies {
-    height: 80%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    div {
-      position: fixed;
-      bottom: 20px;
-      background: var(--light-grey-color-1);
-      box-shadow: 0px 3px 10px #00000010;
-      border-radius: 3px;
-      display: flex;
-      align-items: center;
-      padding: var(--padding-small);
-      p {
-        font-size: 1.6rem;
-        color: var(--black-color-3);
-        span {
-          font-size: inherit;
-          color: inherit;
-          font-weight: bold;
-        }
-      }
-    }
-  }
 }
 
 .dark-background {

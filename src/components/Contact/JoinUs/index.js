@@ -1,7 +1,7 @@
 /** @format */
 
 import React from "react";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import "./styles.scss";
 
 const JoinUs = ({ grey }) => {
@@ -11,7 +11,7 @@ const JoinUs = ({ grey }) => {
         <p>Careers</p>
         <div className="joinus--container--flex">
           <h1>Join our team.</h1>
-          <Link to="/careers">
+          <Link smooth to="/careers#open-positions">
             <button>See opened positions</button>
           </Link>
         </div>

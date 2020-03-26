@@ -35,16 +35,6 @@ const LandingPage = () => {
             <FontAwesomeIcon className="icon-right" icon={faArrowRight} />
           </button>
         </div>
-
-        <div className="landingPage--cookies">
-          <div>
-            <p>
-              {" "}
-              We use cookies to give you the best experience.{" "}
-              <span>Cookie Policy</span>
-            </p>
-          </div>
-        </div>
       </div>
       <div className="dark-background">
         {WhatWeDo()}

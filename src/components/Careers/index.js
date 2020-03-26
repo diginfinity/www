@@ -52,7 +52,9 @@ const Careers = () => {
           understands that work and professional life can bring out the best in
           each of <br /> them, there would not be good team work.
         </p>
-        <button>Contact HR</button>
+        <a href="mailto:hr@digitalinfinity.rs">
+          <button>Contact HR</button>
+        </a>
       </div>
       <div className="careers--bg-image">
         <div className="careers--bg-image--flex">
@@ -147,7 +149,7 @@ const Careers = () => {
           </div>
         </div>
       </div>
-      <div className="open--positions">
+      <div id="open-positions" className="open--positions">
         <h1>Opened positions</h1>
         {renderPositions.map(position => (
           <Position position={position} key={position.id} />

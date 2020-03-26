@@ -42,6 +42,8 @@
       font-size: 1.6rem;
       font-weight: bold;
       cursor: pointer;
+      width: 3.5rem;
+      height: 3.5rem;
     }
   }
 
@@ -53,6 +55,9 @@
     &--item-animate {
       animation-name: animateLinks;
       animation-duration: 1.5s;
+    }
+    &--active {
+      color: var(--active-tab-orange) !important;
     }
     a {
       text-decoration: none;
@@ -99,6 +104,9 @@
         @media only screen and (max-width: 600px) {
           display: none;
         }
+      }
+      &--hide {
+        display: none;
       }
 
       div {
@@ -154,6 +162,10 @@
       p {
         font-size: 1.4rem;
         color: #fff;
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
       }
     }
   }
