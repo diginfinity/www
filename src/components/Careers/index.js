@@ -1,8 +1,9 @@
 /** @format */
 
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import "./styles.scss";
+
+import { digitalApi } from "../../api";
 
 import Header from "../Header";
 import Footer from "../Footer";
@@ -11,27 +12,27 @@ import Internship from "./Internship";
 
 import hrImg from "../../assets/images/img_hr.png";
 
-const openedPositions = [
-  {
-    id: 1,
-    title: "Medior/Senior JavaScript developer",
-    location: "Novi Sad",
-    who:
-      "All candidates with/without formal education in IT. Candidates with formal education will have a slight advantage.",
-    type: "Full time",
-    workingHours: "Weekdays from 9AM to 5PM CET.",
-    description: `We are seeking an innovative and engaged Senior or Medior Javascript developer who is motivated, creative, and fun to assist in developing our web & mobile applications.
-    Your primary focus will be the development of all client-side logic, definition and maintenance of the apps. You will also be responsible for integrating the design elements build by 
-    your co-workers into the application. Therefore, a basic understanding of CSS, SCSS is necessary as well.`
-  }
-];
+// const openedPositions = [
+//   {
+//     id: 1,
+//     title: "Medior/Senior JavaScript developer",
+//     location: "Novi Sad",
+//     who:
+//       "All candidates with/without formal education in IT. Candidates with formal education will have a slight advantage.",
+//     type: "Full time",
+//     workingHours: "Weekdays from 9AM to 5PM CET.",
+//     description: `We are seeking an innovative and engaged Senior or Medior Javascript developer who is motivated, creative, and fun to assist in developing our web & mobile applications.
+//     Your primary focus will be the development of all client-side logic, definition and maintenance of the apps. You will also be responsible for integrating the design elements build by
+//     your co-workers into the application. Therefore, a basic understanding of CSS, SCSS is necessary as well.`
+//   }
+// ];
 
 const Careers = () => {
   const [positions, setPositions] = useState([]);
-
+  console.log(positions);
   useEffect(() => {
-    axios
-      .get("http://localhost:8000/api/v1/jobs/all-job-positions")
+    digitalApi
+      .get("jobs/all-job-positions")
       .then(res => {
         if (res.data.length) {
           setPositions(res.data);
@@ -39,8 +40,7 @@ const Careers = () => {
       })
       .catch(e => console.log(e));
   }, []);
-  const renderPositions =
-    positions.length > 0 ? positions.length : openedPositions;
+
   return (
     <div>
       {Header({ dark: true })}
@@ -151,9 +151,13 @@ const Careers = () => {
       </div>
       <div id="open-positions" className="open--positions">
         <h1>Opened positions</h1>
-        {renderPositions.map(position => (
-          <Position position={position} key={position.id} />
-        ))}
+        {positions.length ? (
+          positions.map((p, index) => <Position key={index} position={p} />)
+        ) : (
+          <div>
+            <h4>We currently have no open positions</h4>
+          </div>
+        )}
       </div>
       <div className="hr">
         <div className="hr--flex-container">

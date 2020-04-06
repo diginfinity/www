@@ -9,6 +9,9 @@
     justify-content: center;
     align-items: center;
     width: var(--width-content);
+    @include responsive(tab-land) {
+      padding: var(--padding-large) 0;
+    }
     @include responsive(tab-port) {
       flex-direction: column;
       align-items: flex-start;
@@ -17,7 +20,7 @@
       // width: 35%;
       width: 50%;
       margin-right: var(--margin-medium);
-      @include responsive(tab-port) {
+      @include responsive(tab-land) {
         width: 100%;
         margin: 0;
       }
@@ -39,9 +42,13 @@
       align-self: flex-start;
       padding-top: var(--padding-small);
       margin-left: var(--margin-medium);
-      @include responsive(tab-port) {
+      @include responsive(tab-land) {
         width: 100%;
         margin: 3rem 0 0 0;
+        padding-left: var(--padding-medium);
+      }
+      @include responsive(tab-port) {
+        padding-left: 0;
       }
       p {
         font-size: 1.6rem;
@@ -51,11 +58,15 @@
     }
   }
   &--items {
-    display: flex;
+    display: grid;
     position: relative;
-    @include responsive(tab-port) {
-      flex-direction: column;
-      height: 100rem;
+    grid-template-columns: repeat(4, 1fr);
+
+    @media only screen and (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media only screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
     }
   }
 }

@@ -1,5 +1,5 @@
 /** @format */
-import React, { useEffect } from "react";
+import React from "react";
 import { Route, Switch } from "react-router";
 import { BrowserRouter as Router } from "react-router-dom";
 
@@ -22,7 +22,7 @@ const createRoutes = () => (
           rel="noopener noreferrer">
           Lin.
         </a>{" "}
-        Tw. /{" "}
+        / Tw. /{" "}
         <a
           href="https://www.instagram.com/sounder.fm/"
           target="_blank"

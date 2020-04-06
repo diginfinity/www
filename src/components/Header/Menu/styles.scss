@@ -1,4 +1,5 @@
 /** @format */
+@import "../../../styles/common.scss";
 
 .hamburgerMenu {
   display: none;
@@ -49,8 +50,18 @@
 
   .nav {
     padding: var(--padding-extra-large) var(--padding-medium);
-    @media only screen and (max-width: 600px) {
+    height: 70%;
+    @include responsive(tab-port) {
       padding: var(--padding-medium) 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    & > * {
+      @include responsive(tab-port) {
+        padding: var(--padding-big) 0;
+      }
     }
     &--item-animate {
       animation-name: animateLinks;
@@ -122,16 +133,16 @@
   &--emails {
     position: absolute;
     bottom: 10%;
-    @media only screen and (max-width: 600px) {
+    width: 100%;
+    @include responsive(phone) {
       bottom: 5%;
     }
     .flex {
       display: flex;
       padding: 0 var(--padding-medium);
       padding-bottom: var(--padding-large);
-      @media only screen and (max-width: 600px) {
-        padding: 0;
-        flex-direction: column;
+      @include responsive(phone) {
+        justify-content: flex-start;
       }
       div {
         padding-left: 0;
@@ -147,10 +158,7 @@
           font-weight: bold;
         }
         &:last-child {
-          margin-left: 100px;
-          @media only screen and (max-width: 600px) {
-            margin: 0;
-          }
+          margin-left: 10rem;
         }
       }
     }

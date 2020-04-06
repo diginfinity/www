@@ -8,13 +8,12 @@ const Positions = props => {
 
   const {
     title,
-    location,
-    who,
+    location = "Novi Sad",
+    short,
     type,
     workingHours,
     description
   } = props.position;
-
   return (
     <div className="position--container">
       <div className="position--container--flex">
@@ -26,29 +25,31 @@ const Positions = props => {
         </div>
         <button>Apply</button>
       </div>
-      {showMore && (
-        <div className="position--container--more-info">
-          <div className="position--container--more-info--item">
-            <p>Location:</p>
-            <p>{location}</p>
-          </div>
-          <div className="position--container--more-info--item">
-            <p>Who can apply:</p>
-            <p>{who}</p>
-          </div>
-          <div className="position--container--more-info--item">
-            <p>Type:</p>
-            <p>{type}</p>
-          </div>
-          <div className="position--container--more-info--item">
-            <p>Working hours:</p>
-            <p>{workingHours}</p>
-          </div>
-          <div className="position--container--more-info--description">
-            <p>{description}</p>
-          </div>
+      {/* {showMore && ( */}
+      <div
+        className="position--container--more-info"
+        style={{ height: `${showMore ? "310px" : "0"}` }}>
+        <div className="position--container--more-info--item">
+          <p>Location:</p>
+          <p>{location}</p>
         </div>
-      )}
+        <div className="position--container--more-info--item">
+          <p>Who can apply:</p>
+          <p>{short}</p>
+        </div>
+        <div className="position--container--more-info--item">
+          <p>Type:</p>
+          <p>{type}</p>
+        </div>
+        <div className="position--container--more-info--item">
+          <p>Working hours:</p>
+          <p>{workingHours}</p>
+        </div>
+        <div className="position--container--more-info--description">
+          <p>{description}</p>
+        </div>
+      </div>
+      {/* )} */}
     </div>
   );
 };

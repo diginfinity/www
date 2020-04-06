@@ -4,6 +4,9 @@
 .clients {
   padding: var(--padding-extra-large) 0;
   background: var(--main-black-color);
+  @include responsive(tab-land) {
+    padding: var(--padding-large) 0;
+  }
   &--wrapper {
     width: var(--width-content);
     margin: auto;
@@ -49,12 +52,18 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         justify-items: center;
-        @include responsive(phone) {
+        @include responsive(tab-land) {
           grid-template-columns: repeat(2, 1fr);
+        }
+        @include responsive(tab-port) {
+          grid-template-columns: repeat(3, 1fr);
         }
         align-items: center;
         img {
           padding: var(--padding-medium);
+          @include responsive(tab-land) {
+            padding-left: 0;
+          }
         }
       }
     }

@@ -26,8 +26,9 @@
     transform: rotate(-90deg);
     top: 50%;
     right: -3%;
-    @media only screen and (max-width: 600px) {
-      right: -25%;
+    z-index: 200;
+    @include responsive(tab-land) {
+      display: none;
     }
     h4 {
       font-size: 1.6rem;
@@ -65,10 +66,9 @@
       font-size: 1.6rem;
       outline: none;
       cursor: pointer;
+      transition: all 1s;
       &:hover {
-        animation-name: bgTransparent;
-        animation-duration: 1s;
-        outline: none;
+        background: transparent;
       }
     }
   }

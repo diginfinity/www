@@ -1,4 +1,5 @@
 /** @format */
+@import "../../../styles/common.scss";
 
 .position--container {
   padding-top: var(--padding-big);
@@ -13,7 +14,8 @@
         background: var(--light-grey-color-1);
         border: 0;
         border-radius: 50%;
-        padding: var(--padding-medium);
+        width: 45px;
+        height: 45px;
         font-size: 2.4rem;
         color: var(--black-color-5);
         outline: none;
@@ -39,7 +41,10 @@
   }
   &--more-info {
     margin-left: var(--margin-extra-large);
-    @media only screen and (max-width: 600px) {
+    overflow: hidden;
+    height: 0;
+    transition: all 1s;
+    @include responsive(tab-port) {
       margin: 0;
     }
     &--item {

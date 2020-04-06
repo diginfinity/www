@@ -2,6 +2,7 @@
 
 import React from "react";
 import "./styles.scss";
+import DI_LOGO from "../../assets/logos/di-logo.png";
 
 const Footer = () => {
   return (
@@ -9,7 +10,13 @@ const Footer = () => {
       <div className="footer--container">
         <div className="footer--container--wrapper">
           <div className="footer--container--wrapper--grid">
-            <div className="logo">LOGO</div>
+            <div className="logo">
+              <img src={DI_LOGO} alt="Digital Infinity Logo" />
+              <br />
+              <h4>
+                digital <br /> infinity.
+              </h4>
+            </div>
             <div className="grid-el">
               <p className="city">Novi Sad</p>
               <p>Bulevar Kralja Petra I 89,</p>

@@ -25,12 +25,8 @@
       color: #fff;
 
       @include responsive(tab-port) {
-        font-size: 6rem;
-        line-height: 6.2rem;
-      }
-      @include responsive(phone) {
-        font-size: 4rem;
-        line-height: 4.2rem;
+        font-size: 7rem;
+        line-height: 7.2rem;
       }
       span {
         color: var(--black-color-2);
@@ -46,6 +42,7 @@
       font-size: 1.6rem;
       transition: all 0.5s;
       cursor: pointer;
+      line-height: 2.4rem;
 
       &:hover {
         color: black;
@@ -53,7 +50,7 @@
       }
       &:hover > .icon-right {
         animation-name: animateArrow;
-        animation-duration: 1s;
+        animation-duration: 2s;
       }
 
       .icon-right {

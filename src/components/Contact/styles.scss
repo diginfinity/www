@@ -5,7 +5,7 @@
 .contact {
   width: var(--width-content);
   margin: auto;
-  padding: var(--padding-large) 0;
+  padding: var(--padding-extra-large) 0 var(--padding-large) 0;
   h1 {
     font-size: 7.2rem;
     font-weight: bold;
@@ -25,34 +25,33 @@
     border-radius: 3px;
     cursor: pointer;
     font-weight: bold;
+    font-size: 1.6rem;
   }
 }
 
 .div-flex {
   display: flex;
-  @media only screen and (max-width: 600px) {
+  @include responsive(tab-land) {
     flex-direction: column;
+    height: 500px; // to be removed
   }
   &--1 {
     flex: 1;
     text-align: center;
-    @media only screen and (max-width: 600px) {
-      height: 400px;
-    }
+    background: lightgreen;
   }
   &--2 {
     flex: 1;
     display: flex;
-    @media only screen and (max-width: 400px) {
-      flex-direction: column;
-    }
-
     .item {
       &--1 {
         background: var(--black-color-1);
         padding: var(--padding-large);
         flex: 1;
-        @media only screen and (max-width: 600px) {
+        @include responsive(tab-port) {
+          padding: var(--padding-big);
+        }
+        @include responsive(phone) {
           padding: var(--padding-medium);
         }
       }
@@ -60,7 +59,10 @@
         background: var(--main-black-color);
         padding: var(--padding-large);
         flex: 1;
-        @media only screen and (max-width: 600px) {
+        @include responsive(tab-port) {
+          padding: var(--padding-big);
+        }
+        @include responsive(phone) {
           padding: var(--padding-medium);
         }
       }

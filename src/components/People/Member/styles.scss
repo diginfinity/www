@@ -18,10 +18,15 @@
       font-size: 1.6rem;
       color: var(--black-color-5);
       font-weight: normal;
+      padding-bottom: var(--padding-small);
       &:first-child {
         font-size: 1.8rem;
         font-weight: bold;
-        padding-bottom: var(--padding-small);
+      }
+    }
+    &--linkedin {
+      img {
+        width: 2rem;
       }
     }
   }

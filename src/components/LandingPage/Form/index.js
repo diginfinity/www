@@ -17,28 +17,49 @@ const Form = () => {
           <form>
             <div className="actual_form">
               <div>
-                <label>Your name (required)</label>
-                <input placeholder="John Doe" />
+                <label htmlFor="name">Your name (required)</label>
+                <input type="text" id="name" placeholder="John Doe" />
               </div>
               <div>
-                <label>Company (required)</label>
-                <input placeholder="Your company name" />
+                <label htmlFor="company">Company (required)</label>
+                <input
+                  type="text"
+                  id="company"
+                  placeholder="Your company name"
+                />
               </div>
               <div>
-                <label>Email (required)</label>
-                <input placeholder="Your working email" />
+                <label htmlFor="email">Email (required)</label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Your working email"
+                />
               </div>
               <div>
-                <label>Phone (optional)</label>
-                <input placeholder="Your actual phone number" />
+                <label htmlFor="phone">Phone (optional)</label>
+                <input
+                  type="number"
+                  id="phone"
+                  placeholder="Your actual phone number"
+                />
               </div>
               <div>
-                <label>Subject (optional)</label>
-                <input placeholder="Your working email" />
+                <label htmlFor="subject">Subject (optional)</label>
+                <input
+                  type="text"
+                  id="subject"
+                  placeholder="Your working email"
+                />
               </div>
               <div>
-                <label>Your name (required)</label>
-                <input />
+                <label htmlFor="budget">Choose a budget (USD)</label>
+                <select id="budget">
+                  <option>Less than 5k</option>
+                  <option>5k-10k</option>
+                  <option>Over 10k</option>
+                  <option>Please advice</option>
+                </select>
               </div>
             </div>
             <button>Send</button>

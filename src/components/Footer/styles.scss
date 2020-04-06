@@ -4,12 +4,12 @@
 
 .footer {
   background: var(--black-color-1);
-  @media only screen and (max-width: 600px) {
+  @include responsive(tab-port) {
     z-index: 250;
   }
   &--container {
     padding-top: var(--padding-extra-large);
-    @media only screen and (max-width: 600px) {
+    @include responsive(tab-land) {
       padding-top: var(--padding-large);
     }
     &--wrapper {
@@ -17,7 +17,7 @@
       margin: auto;
       display: flex;
       justify-content: space-between;
-      @media only screen and (max-width: 600px) {
+      @include responsive(tab-port) {
         flex-direction: column;
       }
       &--grid {
@@ -25,15 +25,30 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 3rem;
-        @media only screen and (max-width: 600px) {
-          grid-template-columns: 1fr;
+        @include responsive(tab-port) {
+          grid-template-columns: repeat(2, 1fr);
         }
         .logo {
-          color: #fff;
-          font-size: 30px; // TO BE REMOVED
+          img {
+            width: 5rem;
+          }
+          h4 {
+            font-size: 2.2rem;
+            color: #fff;
+          }
         }
         .grid-el {
           line-height: 2.2rem;
+          &:nth-child(2) {
+            @include responsive(tab-port) {
+              grid-row: 3/4;
+            }
+          }
+          &:nth-child(5) {
+            @include responsive(tab-port) {
+              grid-row: 3/4;
+            }
+          }
           p {
             color: #fff;
             font-size: 1.6rem;
@@ -42,7 +57,7 @@
             color: var(--light-grey-color-2);
             font-size: 1.6rem;
             margin-bottom: var(--margin-medium);
-            @media only screen and (max-width: 600px) {
+            @include responsive(tab-port) {
               margin-bottom: var(--margin-small);
             }
           }
@@ -50,14 +65,16 @@
       }
       &--flex {
         flex: 1;
-
+        @include responsive(tab-port) {
+          margin-top: var(--margin-medium);
+        }
         .flex--item {
           &:first-child {
             margin-top: 0;
           }
           margin: var(--margin-big);
-          @media only screen and (max-width: 600px) {
-            margin: 0;
+          @include responsive(tab-port) {
+            margin: var(--margin-small) 0;
           }
 
           .info {
@@ -83,13 +100,10 @@
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid var(--border-color-light);
-    width: 70%;
+    width: var(--width-content);
     margin: auto;
     margin-top: var(--margin-medium);
     padding: var(--padding-big) 0;
-    @media only screen and (max-width: 600px) {
-      width: 90%;
-    }
 
     p {
       color: var(--light-grey-color-2);
@@ -100,7 +114,8 @@
 }
 
 .hide-on-small-devices {
-  @media only screen and (max-width: 600px) {
-    display: none;
+  @include responsive(tab-port) {
+    grid-column: 2/3;
+    grid-row: 1/2;
   }
 }

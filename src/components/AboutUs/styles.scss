@@ -1,4 +1,5 @@
 /** @format */
+@import "../../styles/common.scss";
 
 .aboutus {
   &--bgimage {
@@ -18,12 +19,12 @@
 
       &:first-child {
         padding-bottom: var(--padding-large);
-        @media only screen and (max-width: 600px) {
+        @include responsive(tab-port) {
           padding-bottom: var(--padding-medium);
         }
       }
       &:last-child {
-        @media only screen and (max-width: 600px) {
+        @include responsive(tab-port) {
           flex-direction: column;
         }
       }
@@ -31,10 +32,12 @@
         flex: 1;
         &:first-child {
           div {
-            width: 70%;
-            @media only screen and (max-width: 600px) {
+            @include responsive(tab-land) {
               width: 100%;
               padding-bottom: var(--padding-big);
+            }
+            @include responsive(large-screen) {
+              width: 70%;
             }
             p {
               padding-bottom: var(--padding-big);
@@ -47,11 +50,13 @@
         }
         &:last-child {
           div {
-            width: 70%;
             margin: 0 auto;
             line-height: 3rem;
-            @media only screen and (max-width: 600px) {
+            @include responsive(tab-land) {
               width: 100%;
+            }
+            @include responsive(large-screen) {
+              width: 70%;
             }
             p {
               font-size: 1.6rem;
@@ -78,7 +83,7 @@
       display: flex;
       align-items: flex-start;
       &--1 {
-        width: 50%;
+        width: 40%;
         p {
           font-size: 1.6rem;
           color: var(--black-color-1);
@@ -90,7 +95,7 @@
         }
       }
       &--2 {
-        width: 50%;
+        width: 60%;
         margin: 0 auto;
 
         p {
@@ -98,11 +103,14 @@
           color: var(--black-color-1);
         }
         .awards {
-          display: flex;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
           padding-top: var(--padding-large);
-          @media only screen and (max-width: 600px) {
-            display: grid;
+          @include responsive(tab-land) {
             grid-template-columns: repeat(2, 1fr);
+          }
+          @include responsive(tab-port) {
+            grid-template-columns: 1fr;
           }
           div {
             p {
@@ -116,29 +124,42 @@
   &--project {
     background: var(--light-grey-color-1);
     padding: var(--padding-extra-large) 0;
-    @media only screen and (max-width: 600px) {
+    @include responsive(tab-port) {
       padding: var(--padding-large) 0;
     }
     &--wrapper {
       width: var(--width-content);
       margin: 0 auto;
+
       &--flex {
         display: flex;
         justify-content: space-between;
-
+        @include responsive(phone) {
+          flex-direction: column;
+        }
         div {
           p {
             font-size: 1.6rem;
             color: var(--black-color-1);
             padding-bottom: var(--padding-medium);
+            @include responsive(phone) {
+              display: none;
+            }
           }
           h1 {
             font-size: 4rem;
             color: var(--black-color-1);
             padding-bottom: var(--padding-large);
+            @include responsive(phone) {
+              text-align: center;
+              padding-bottom: var(--padding-medium);
+            }
           }
           &:last-child {
             align-self: center;
+            @include responsive(phone) {
+              width: 100%;
+            }
             button {
               font-size: 1.6rem;
               font-weight: bold;
@@ -148,6 +169,10 @@
               border: 0;
               padding: 0.5rem var(--padding-small);
               cursor: pointer;
+              @include responsive(phone) {
+                width: 100%;
+                padding: 1rem;
+              }
             }
           }
         }
@@ -155,9 +180,17 @@
       &--footer {
         padding-top: var(--padding-medium);
         border-top: 1px solid var(--border-color);
+        @include responsive(phone) {
+          border: none;
+        }
         p {
           font-size: 1.6rem;
           color: var(--black-color-1);
+          br {
+            @include responsive(tab-port) {
+              display: none;
+            }
+          }
         }
       }
     }
@@ -185,7 +218,10 @@
       padding: var(--padding-extra-large) 0;
       &--flex {
         display: flex;
-        justify-content: space-around;
+        justify-content: flex-start;
+        &--2 {
+          margin-left: var(--margin-large);
+        }
         &--title {
           display: flex;
           align-items: center;
