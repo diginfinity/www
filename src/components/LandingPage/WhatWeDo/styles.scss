@@ -61,11 +61,10 @@
     display: grid;
     position: relative;
     grid-template-columns: repeat(4, 1fr);
-
-    @media only screen and (max-width: 992px) {
+    @include responsive(tab-land) {
       grid-template-columns: repeat(2, 1fr);
     }
-    @media only screen and (max-width: 768px) {
+    @include responsive(tab-port) {
       grid-template-columns: 1fr;
     }
   }

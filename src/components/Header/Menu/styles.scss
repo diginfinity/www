@@ -22,13 +22,13 @@
     transition: all 0.5s;
     display: none;
   }
-  @media only screen and (max-width: 600px) {
+  @include responsive(tab-port) {
     padding: var(--padding-small) var(--padding-medium);
   }
 
   &--button {
     width: 100%;
-    @media only screen and (max-width: 600px) {
+    @include responsive(tab-port) {
       position: absolute;
       right: 5%;
       top: 5%;
@@ -40,7 +40,7 @@
       padding: var(--padding-small);
       background: var(--black-color-1);
       color: #fff;
-      font-size: 1.6rem;
+      font-size: 2rem;
       font-weight: bold;
       cursor: pointer;
       width: 3.5rem;
@@ -51,12 +51,16 @@
   .nav {
     padding: var(--padding-extra-large) var(--padding-medium);
     height: 70%;
+    @include responsive(tab-land) {
+      padding: var(--padding-big) 0;
+    }
     @include responsive(tab-port) {
       padding: var(--padding-medium) 0;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      height: 100%;
     }
     & > * {
       @include responsive(tab-port) {
@@ -79,8 +83,7 @@
       color: #fff;
       margin-bottom: var(--margin-medium);
       cursor: pointer;
-      @media only screen and (max-width: 600px) {
-        font-size: 3rem;
+      @include responsive(tab-port) {
         margin-bottom: var(--margin-small);
       }
       sup {
@@ -91,6 +94,10 @@
       }
     }
     .tabClicked {
+      margin-bottom: 70px;
+      @include responsive(tab-port) {
+        margin-bottom: 0;
+      }
       sup {
         display: none;
       }
@@ -101,18 +108,13 @@
       display: flex;
       position: relative;
       align-items: center;
-      @media only screen and (max-width: 600px) {
-        position: relative;
-        flex-direction: column;
-        align-items: flex-start;
-      }
       &--expand {
         margin-left: var(--margin-extra-large);
         font-size: 1.6rem;
         color: #fff;
         padding-bottom: var(--padding-small);
         cursor: pointer;
-        @media only screen and (max-width: 600px) {
+        @include responsive(tab-port) {
           display: none;
         }
       }
@@ -124,7 +126,7 @@
         position: absolute;
         left: 30%;
         top: 0;
-        @media only screen and (max-width: 600px) {
+        @include responsive(tab-port) {
           position: relative;
         }
       }
@@ -134,8 +136,8 @@
     position: absolute;
     bottom: 10%;
     width: 100%;
-    @include responsive(phone) {
-      bottom: 5%;
+    @include responsive(tab-port) {
+      display: none;
     }
     .flex {
       display: flex;
@@ -164,7 +166,7 @@
     }
     div {
       padding: 0 var(--padding-medium);
-      @media only screen and (max-width: 600px) {
+      @include responsive(tab-port) {
         padding: var(--padding-medium) 0;
       }
       p {

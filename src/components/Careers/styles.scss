@@ -4,14 +4,17 @@
 .careers {
   width: var(--width-content);
   margin: 0 auto;
-  padding: var(--padding-large) 0;
-  @include responsive(tab-land) {
+  padding: var(--padding-extra-large) 0;
+  @include responsive(tab-port) {
     padding: var(--padding-big) 0;
   }
   h1 {
     font-size: 7.2rem;
     font-weight: bold;
     color: var(--color-black-1);
+    @include responsive(tab-port) {
+      margin-top: var(--margin-large);
+    }
   }
   p {
     padding: var(--padding-big) 0;
@@ -85,6 +88,9 @@
   width: var(--width-content);
   margin: 0 auto;
   padding: var(--padding-large) 0;
+  @include responsive(phone) {
+    text-align: center;
+  }
   p {
     font-size: 1.6rem;
     color: var(--black-color-1);
@@ -125,12 +131,14 @@
     @include responsive(tab-land) {
       flex: 6;
     }
-    @media only screen and (max-width: 600px) {
-      padding: var(--padding-large) 0;
+    @include responsive(tab-port) {
+      padding: var(--padding-large);
     }
     height: 100%;
     &--text {
-      @media only screen and (max-width: 600px) {
+      width: 100%;
+      text-align: center;
+      @include responsive(phone) {
         width: 90%;
         margin: auto;
       }
@@ -138,11 +146,19 @@
         font-size: 4rem;
         font-weight: bold;
         padding-bottom: var(--padding-medium);
+        @include responsive(tab-port) {
+          margin-bottom: var(--margin-medium);
+        }
       }
       p {
         font-size: 1.6rem;
         line-height: 3rem;
         padding-bottom: var(--padding-medium);
+        br {
+          @include responsive(tab-port) {
+            display: none;
+          }
+        }
         &:last-child {
           padding-bottom: 0;
         }

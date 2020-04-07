@@ -1,20 +1,18 @@
 /** @format */
 
+@import "../../../styles/common.scss";
+
 .internship {
   background: var(--main-black-color);
   &--container {
-    width: 70%;
+    width: var(--width-content);
     margin: 0 auto;
     padding: var(--padding-large) 0;
-    @media only screen and (max-width: 600px) {
-      width: 90%;
-      margin: auto;
-    }
     &--flex {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      @media only screen and (max-width: 600px) {
+      @include responsive(tab-port) {
         flex-direction: column;
         align-items: flex-start;
       }
@@ -42,7 +40,7 @@
           background: var(--red-color-1);
           padding: 0.5rem 1rem;
           cursor: pointer;
-          @media only screen and (max-width: 600px) {
+          @include responsive(tab-port) {
             margin-top: var(--margin-medium);
           }
         }
@@ -52,6 +50,9 @@
       margin-top: var(--margin-medium);
       border-top: 1px solid var(--border-color);
       padding: var(--padding-medium) 0;
+      @include responsive(phone) {
+        border: none;
+      }
       p {
         font-size: 1.6rem;
         line-height: 2.2rem;

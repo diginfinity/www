@@ -76,7 +76,7 @@
     width: var(--width-content);
     margin: 0 auto;
     padding: var(--padding-extra-large) 0;
-    @media only screen and (max-width: 600px) {
+    @include responsive(tab-port) {
       padding: var(--padding-large) 0;
     }
     &--flex {

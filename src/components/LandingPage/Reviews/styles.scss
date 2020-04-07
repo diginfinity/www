@@ -20,10 +20,10 @@
       position: relative;
       margin: auto 15%;
       overflow: hidden;
-      @media only screen and (max-width: 768px) {
+      @include responsive(tab-port) {
         margin: 10%;
       }
-      @media only screen and (max-width: 480px) {
+      @include responsive(phone) {
         margin: 5%;
       }
       &--opacity {

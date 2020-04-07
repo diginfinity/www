@@ -6,11 +6,17 @@
   width: var(--width-content);
   margin: auto;
   padding: var(--padding-extra-large) 0 var(--padding-large) 0;
+  @include responsive(tab-port) {
+    padding: var(--padding-big) 0;
+  }
   h1 {
     font-size: 7.2rem;
     font-weight: bold;
     padding-bottom: var(--padding-medium);
     color: var(--black-color-1);
+    @include responsive(tab-port) {
+      margin-top: var(--margin-large);
+    }
   }
   p {
     font-size: 1.6rem;

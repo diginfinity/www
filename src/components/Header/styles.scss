@@ -45,11 +45,20 @@
     display: flex;
     align-items: center;
     z-index: 200;
-
+    div {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
     h3 {
       font-size: 2.5rem;
       margin-left: var(--margin-medium);
       color: #fff;
+      @include responsive(tab-port) {
+        margin-left: 0;
+      }
     }
     .dark {
       color: var(--black-color-1);
@@ -66,8 +75,9 @@
       font-size: 1.6rem;
       outline: none;
       cursor: pointer;
-      transition: all 1s;
+      transition: background-color 1s, font-weight 1s 0.5s;
       &:hover {
+        font-weight: bold;
         background: transparent;
       }
     }
@@ -82,14 +92,5 @@
   }
   .dark_background {
     color: black;
-  }
-}
-
-@keyframes bgTransparent {
-  from {
-    background: var(--black-color-1);
-  }
-  to {
-    background: transparent;
   }
 }

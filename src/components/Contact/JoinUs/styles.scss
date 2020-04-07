@@ -26,6 +26,7 @@
       border-bottom: 1px solid var(--border-color);
       @include responsive(phone) {
         flex-direction: column;
+        border: none;
       }
       h1 {
         color: var(--black-color-1);
@@ -55,6 +56,11 @@
       p {
         font-size: 1.6rem;
         color: var(--black-color-5);
+        br {
+          @include responsive(phone) {
+            display: none;
+          }
+        }
       }
     }
   }

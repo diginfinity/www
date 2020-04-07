@@ -50,13 +50,10 @@
       }
       .logo-holder {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
         justify-items: center;
         @include responsive(tab-land) {
           grid-template-columns: repeat(2, 1fr);
-        }
-        @include responsive(tab-port) {
-          grid-template-columns: repeat(3, 1fr);
         }
         align-items: center;
         img {

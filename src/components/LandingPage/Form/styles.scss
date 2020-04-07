@@ -4,15 +4,14 @@
 
 .form {
   padding: var(--padding-extra-large) 0;
-
-  @media only screen and (max-width: 768px) {
+  @include responsive(tab-port) {
     padding: var(--padding-small) 0;
   }
   &--wrapper {
     width: var(--width-content);
     display: flex;
     margin: auto;
-    @media only screen and (max-width: 768px) {
+    @include responsive(tab-port) {
       flex-direction: column;
     }
     &--left {
@@ -34,7 +33,7 @@
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
         grid-gap: 10px;
-        @media only screen and (max-width: 768px) {
+        @include responsive(tab-port) {
           grid-template-columns: 1fr;
         }
 
@@ -53,7 +52,7 @@
           outline: none;
           caret-color: #fff;
           color: #fff;
-          @media only screen and (max-width: 768px) {
+          @include responsive(tab-port) {
             width: 100%;
           }
         }
@@ -66,7 +65,7 @@
           width: 80%;
           outline: none;
           color: #fff;
-          @media only screen and (max-width: 768px) {
+          @include responsive(tab-port) {
             width: 100%;
           }
         }
@@ -83,7 +82,7 @@
         color: #fff;
         font-size: 1.6rem;
         cursor: pointer;
-        @media only screen and (max-width: 768px) {
+        @include responsive(tab-port) {
           width: 100%;
           padding: 10px;
           font-size: 1.8rem;
@@ -94,7 +93,7 @@
       flex: 1;
       &--wrapper {
         padding-left: var(--padding-extra-large);
-        @media only screen and (max-width: 768px) {
+        @include responsive(tab-port) {
           padding: var(--padding-big) 0 0 0;
         }
         .get-in-touch {
@@ -126,7 +125,7 @@
     }
   }
 }
-
+// hide arrows from input type=number
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

@@ -111,6 +111,16 @@
       padding-top: var(--padding-small);
     }
   }
+  &--followus {
+    display: none;
+    @include responsive(tab-port) {
+      display: block;
+      font-size: 10px;
+      color: #fff;
+      text-align: center;
+      margin: var(--margin-small) 0;
+    }
+  }
 }
 
 .hide-on-small-devices {

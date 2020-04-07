@@ -29,7 +29,7 @@
     // min-height: 400px;
     // max-height: 600px;
     height: 100%;
-    @media only screen and (max-width: 600px) {
+    @include responsive(tab-port) {
       flex-direction: column;
     }
     &--img {

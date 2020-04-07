@@ -17,6 +17,9 @@
       font-size: 1.4rem;
       color: #fff;
       margin-bottom: var(--margin-small);
+      @include responsive(phone) {
+        font-size: 2rem;
+      }
     }
 
     h1 {
@@ -56,6 +59,9 @@
       .icon-right {
         margin-left: var(--margin-small);
         font-size: 1.4rem;
+      }
+      @include responsive(phone) {
+        font-size: 2rem;
       }
     }
   }

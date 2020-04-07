@@ -58,6 +58,9 @@ const Footer = () => {
             </div>
           </div>
         </div>
+        <div className="footer--followus">
+          Follow us - Fb. / Lin. / Tw. / Inst
+        </div>
         <div className="footer--rights">
           <p>@2017 - 2020 Digital Infinity</p>
           <p>All rights reserved</p>
