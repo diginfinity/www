@@ -10,6 +10,7 @@
   box-sizing: border-box;
   width: 100%;
   position: fixed;
+
   &--hide {
     visibility: hidden;
     transition: all 200ms ease-out;
@@ -19,6 +20,8 @@
     visibility: visible;
     transition: all 200ms ease-in;
     transform: none;
+    z-index: 200;
+    background: black;
   }
 
   &--followus {

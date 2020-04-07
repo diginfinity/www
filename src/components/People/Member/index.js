@@ -2,6 +2,7 @@
 
 import React from "react";
 import linkedin_img from "../../../assets/logos/linkedin.svg";
+import digitalLogo from '../../../assets/logos/di-logo.png';
 import "./styles.scss";
 
 const Member = props => {
@@ -11,7 +12,7 @@ const Member = props => {
       <div className="member--img">
         {imageId && (
           <img
-            src={`http://localhost:8000/api/v1/image/${imageId}`}
+            src={imageId ? `http://localhost:8000/api/v1/image/${imageId}`: digitalLogo}
             alt={name}
           />
         )}
