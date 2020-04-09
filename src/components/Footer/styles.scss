@@ -2,130 +2,79 @@
 
 @import "../../styles/common.scss";
 
-.footer {
-  background: var(--black-color-1);
+.hide-on-small-devices {
   @include responsive(tab-port) {
-    z-index: 250;
+    grid-column: 2/3;
+    grid-row: 1/2;
   }
-  &--container {
-    padding-top: var(--padding-extra-large);
-    @include responsive(tab-land) {
-      padding-top: var(--padding-large);
-    }
-    &--wrapper {
-      width: var(--width-content);
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      @include responsive(tab-port) {
-        flex-direction: column;
-      }
-      &--grid {
-        flex: 2;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 3rem;
-        @include responsive(tab-port) {
-          grid-template-columns: repeat(2, 1fr);
-        }
-        .logo {
-          img {
-            width: 5rem;
-          }
-          h4 {
-            font-size: 2.2rem;
-            color: #fff;
-          }
-        }
-        .grid-el {
-          line-height: 2.2rem;
-          &:nth-child(2) {
-            @include responsive(tab-port) {
-              grid-row: 3/4;
-            }
-          }
-          &:nth-child(5) {
-            @include responsive(tab-port) {
-              grid-row: 3/4;
-            }
-          }
-          p {
-            color: #fff;
-            font-size: 1.6rem;
-          }
-          .city {
-            color: var(--light-grey-color-2);
-            font-size: 1.6rem;
-            margin-bottom: var(--margin-medium);
-            @include responsive(tab-port) {
-              margin-bottom: var(--margin-small);
-            }
-          }
-        }
-      }
-      &--flex {
-        flex: 1;
-        @include responsive(tab-port) {
-          margin-top: var(--margin-medium);
-        }
-        .flex--item {
-          &:first-child {
-            margin-top: 0;
-          }
-          margin: var(--margin-big);
-          @include responsive(tab-port) {
-            margin: var(--margin-small) 0;
-          }
+}
 
-          .info {
-            color: var(--light-grey-color-2);
-            font-size: 1.6rem;
-            margin-bottom: var(--margin-medium);
-          }
-          .bold {
-            color: #fff;
-            font-size: 1.6rem;
-            font-weight: bold;
-          }
-          p {
-            color: #fff;
-            font-size: 1.6rem;
-          }
-        }
-      }
+footer {
+  background: var(--black-color-1);
+
+  .footer-container {
+    @media only screen and (max-width: 640px) {
+      padding: var(--padding-large) var(--padding-medium);
     }
   }
-  &--rights {
+  .digital_text {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0;
+  }
+  .logo-container {
+    text-align: center;
+    @media only screen and (max-width: 640px) {
+      width: 100%;
+      // text-align: left;
+    }
+  }
+  .flex-responsive {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    @media only screen and (max-width: 640px) {
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+    }
+    & > div {
+      flex: 1;
+    }
+  }
+  .footer-card {
+    &:nth-child(2) {
+      @media only screen and (max-width: 480px) {
+        margin-left: 20px;
+      }
+    }
+    h5 {
+      font-size: 1.6rem;
+      color: var(--light-grey-color-2);
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.6rem;
+      color: #fff;
+      margin: 0;
+    }
+  }
+  .responsive-info {
+    @media only screen and (max-width: 480px) {
+      display: block;
+    }
+  }
+  .footer-rights {
     border-top: 1px solid var(--border-color-light);
-    width: var(--width-content);
-    margin: auto;
-    margin-top: var(--margin-medium);
-    padding: var(--padding-big) 0;
-
+    // padding: var(--padding-medium) 0;
+    // width: 70%;
+    // @media only screen and (max-width: 480px) {
+    //   width: 90%;
+    // }
     p {
       color: var(--light-grey-color-2);
       font-size: 1.4rem;
       padding-top: var(--padding-small);
     }
-  }
-  &--followus {
-    display: none;
-    @include responsive(tab-port) {
-      display: block;
-      font-size: 10px;
-      color: #fff;
-      text-align: center;
-      margin: var(--margin-small) 0;
-    }
-  }
-}
-
-.hide-on-small-devices {
-  @include responsive(tab-port) {
-    grid-column: 2/3;
-    grid-row: 1/2;
   }
 }

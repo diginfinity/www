@@ -15,7 +15,7 @@ const Clients = () => (
         <h1>Some friends we have made while working together.</h1>
       </div>
       <div className="clients--wrapper--2">
-        <p>
+        <p className="uk-text-capitalise">
           Our clients describe us as product team which splits between creative
           strategies and digital products, delivering strong messages and visual
           experience using latest technologies.
