@@ -71,8 +71,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="uk-container uk-container-large">
         <div className="uk-container uk-flex uk-flex-between uk-padding footer-rights">
           <p className="uk-margin-remove">
             @2017 - {currentYear} Digital Infinity
