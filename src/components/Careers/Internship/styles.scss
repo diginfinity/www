@@ -2,62 +2,33 @@
 
 @import "../../../styles/common.scss";
 
-.internship {
+#internship {
   background: var(--main-black-color);
-  &--container {
-    width: var(--width-content);
-    margin: 0 auto;
-    padding: var(--padding-large) 0;
-    &--flex {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      @include responsive(tab-port) {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .flex--item--1 {
-        p {
-          font-size: 1.6rem;
-          color: #fff;
-          line-height: 2.2rem;
-          padding-bottom: var(--padding-small);
-        }
-        h1 {
-          font-size: 4rem;
-          line-height: 5.4rem;
-          color: #fff;
-        }
-      }
-      .flex--item--2 {
-        button {
-          font-size: 1.6rem;
-          font-weight: bold;
-          line-height: 2.4rem;
-          color: #fff;
-          border-radius: 3px;
-          border: 0;
-          background: var(--red-color-1);
-          padding: 0.5rem 1rem;
-          cursor: pointer;
-          @include responsive(tab-port) {
-            margin-top: var(--margin-medium);
-          }
-        }
-      }
+  .internship-container {
+    @media only screen and (max-width: 640px) {
+      text-align: center;
     }
-    &--text {
-      margin-top: var(--margin-medium);
-      border-top: 1px solid var(--border-color);
-      padding: var(--padding-medium) 0;
-      @include responsive(phone) {
-        border: none;
-      }
-      p {
-        font-size: 1.6rem;
-        line-height: 2.2rem;
-        color: #fff;
-      }
+  }
+  h3 {
+    color: #fff;
+    margin: 10px 0 0 0;
+  }
+  button {
+    border-radius: 3px;
+    background: var(--red-color-1);
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: none;
+    @media only screen and (max-width: 640px) {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+  }
+  hr {
+    @media only screen and (max-width: 640px) {
+      display: none;
     }
   }
 }

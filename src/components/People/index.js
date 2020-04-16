@@ -57,25 +57,29 @@ const People = () => {
   useEffect(() => {
     digitalApi
       .get("employees/all-employees")
-      .then(res => setPeople(res.data))
-      .catch(e => console.log(e));
+      .then((res) => setPeople(res.data))
+      .catch((e) => console.log(e));
   }, []);
   return (
-    <div>
+    <section id="members">
       {Header({ dark: true })}
-      <div className="people">
-        <h1>It's about the people.</h1>
-        <p>Great thinkers, good creators and excellent companions.</p>
-        <div className="people--members">
-          {people.map(p => (
-            <Member member={p} key={p._id} />
-          ))}
+      <div className="members-container uk-container uk-container-large">
+        <div className="uk-padding-large">
+          <h1 className="uk-heading-large">It's about the people.</h1>
+          <p className="uk-text-large">
+            Great thinkers, good creators and excellent companions.
+          </p>
+          <div className="uk-width-1 uk-flex uk-flex-wrap">
+            {people.map((p) => (
+              <Member member={p} key={p._id} />
+            ))}
+          </div>
         </div>
       </div>
       {JoinUs({ grey: true })}
       {Internship()}
       {Footer()}
-    </div>
+    </section>
   );
 };
 export default People;

@@ -1,9 +1,11 @@
 /** @format */
 
 import React, { useState } from "react";
+import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./styles.scss";
 
-const Positions = props => {
+const Positions = (props) => {
   const [showMore, setShowMore] = useState(false);
 
   const {
@@ -12,44 +14,57 @@ const Positions = props => {
     short,
     type,
     workingHours,
-    description
+    description,
   } = props.position;
   return (
-    <div className="position--container">
-      <div className="position--container--flex">
-        <div>
-          <button onClick={() => setShowMore(!showMore)}>
-            {showMore ? "-" : "+"}
+    <div className="uk-card positions-container">
+      <div className="uk-flex uk-flex-between uk-flex-middle">
+        <div className="uk-flex uk-flex-middle">
+          <button
+            className="uk-button show-more"
+            onClick={() => setShowMore(!showMore)}>
+            {showMore ? <FontAwesomeIcon icon={faMinus} size='2x' /> : <FontAwesomeIcon icon={faPlus} size='2x' />}
           </button>
-          <h4>{title}</h4>
+          <p className="uk-text-large position-title">{title}</p>
         </div>
-        <button>Apply</button>
+        <div>
+          <button className="uk-button position-apply">Apply</button>
+        </div>
       </div>
-      {/* {showMore && ( */}
       <div
-        className="position--container--more-info"
-        style={{ height: `${showMore ? "310px" : "0"}` }}>
-        <div className="position--container--more-info--item">
-          <p>Location:</p>
-          <p>{location}</p>
+        className="uk-container uk-container-medium position-more-info"
+        style={{
+          overflow: "hidden",
+          transition: "all .5s",
+          height: `${showMore ? "400px" : "0"}`,
+        }}>
+        <div>
+          <p className="uk-text-large">
+            <span className="uk-text-large uk-text-bold">Location:</span>{" "}
+            {location}
+          </p>
         </div>
-        <div className="position--container--more-info--item">
-          <p>Who can apply:</p>
-          <p>{short}</p>
+        <div>
+          <p className="uk-text-large">
+            <span className="uk-text-large uk-text-bold">Who can apply:</span>{" "}
+            {short}
+          </p>
         </div>
-        <div className="position--container--more-info--item">
-          <p>Type:</p>
-          <p>{type}</p>
+        <div>
+          <p className="uk-text-large">
+            <span className="uk-text-large uk-text-bold">Type:</span> {type}
+          </p>
         </div>
-        <div className="position--container--more-info--item">
-          <p>Working hours:</p>
-          <p>{workingHours}</p>
+        <div>
+          <p className="uk-text-large">
+            <span className="uk-text-large uk-text-bold">Working hours:</span>{" "}
+            {workingHours}
+          </p>
         </div>
-        <div className="position--container--more-info--description">
-          <p>{description}</p>
+        <div>
+          <p className="uk-text-large">{description}</p>
         </div>
       </div>
-      {/* )} */}
     </div>
   );
 };

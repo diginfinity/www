@@ -2,121 +2,48 @@
 
 @import "../../styles/common.scss";
 
-.contact {
-  width: var(--width-content);
-  margin: auto;
-  padding: var(--padding-extra-large) 0 var(--padding-large) 0;
-  @include responsive(tab-port) {
-    padding: var(--padding-big) 0;
+#contact {
+  .contact-container {
+    // padding-top: var(--padding-extra-large);
+    padding-top: 70px;
   }
-  h1 {
-    font-size: 7.2rem;
-    font-weight: bold;
-    padding-bottom: var(--padding-medium);
-    color: var(--black-color-1);
-    @include responsive(tab-port) {
-      margin-top: var(--margin-large);
-    }
-  }
-  p {
+  .send-email-button {
     font-size: 1.6rem;
-    color: var(--black-color-4);
-    padding-bottom: var(--padding-medium);
-  }
-  button {
+    font-weight: bold;
+    text-transform: none;
     background: var(--red-color-1);
-    color: #fff;
-    padding: var(--padding-small);
-    border: 0;
     border-radius: 3px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1.6rem;
+    color: #fff;
   }
-}
-
-.div-flex {
-  display: flex;
-  @include responsive(tab-land) {
-    flex-direction: column;
-    height: 500px; // to be removed
-  }
-  &--1 {
-    flex: 1;
-    text-align: center;
+  .google-map {
     background: lightgreen;
   }
-  &--2 {
-    flex: 1;
+  .icon-holder {
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
     display: flex;
-    .item {
-      &--1 {
-        background: var(--black-color-1);
-        padding: var(--padding-large);
-        flex: 1;
-        @include responsive(tab-port) {
-          padding: var(--padding-big);
-        }
-        @include responsive(phone) {
-          padding: var(--padding-medium);
-        }
-      }
-      &--2 {
-        background: var(--main-black-color);
-        padding: var(--padding-large);
-        flex: 1;
-        @include responsive(tab-port) {
-          padding: var(--padding-big);
-        }
-        @include responsive(phone) {
-          padding: var(--padding-medium);
-        }
-      }
-    }
-  }
-}
-
-.information {
-  h3 {
-    font-size: 1.8rem;
+    align-items: center;
+    justify-content: center;
     color: #fff;
-    font-weight: bold;
-    padding: var(--padding-medium) 0;
   }
-  &--grey {
-    color: var(--light-grey-color-2);
-    font-size: 1.4rem;
-    padding: var(--padding-medium) 0;
-  }
-  &--info {
-    p {
-      font-size: 1.4rem;
+  .get-in-touch {
+    background: var(--black-color-1);
+    h3 {
       color: #fff;
-      font-weight: bold;
+    }
+    p {
+      margin: 1rem 0;
     }
   }
-  &--info-2 {
-    line-height: 2rem;
-    p {
-      font-size: 1.4rem;
+  .post-address {
+    background: var(--main-black-color);
+    h3 {
       color: #fff;
-      &:first-child {
-        font-weight: bold;
-      }
     }
-  }
-}
-
-.iconHolder {
-  border: 2px solid #fff;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-
-  .icon-icon {
-    color: #fff;
+    p {
+      margin: 1rem 0;
+    }
   }
 }

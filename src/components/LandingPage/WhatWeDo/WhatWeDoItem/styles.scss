@@ -2,18 +2,12 @@
 
 @import "../../../../styles/common.scss";
 
-.item {
-  height: 500px;
-  flex: 1;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  overflow: hidden;
-  padding: 0;
-  @media only screen and (max-width: 1000px) {
-    height: 400px;
+#item {
+  height: 450px;
+  @media only screen and (max-width: 640px) {
+    height: 300px;
   }
-  &--image {
+  .item--opacity {
     position: absolute;
     top: 0;
     left: 0;
@@ -24,16 +18,17 @@
     background: black;
   }
   div {
-    padding: var(--padding-large) var(--padding-big);
     z-index: 5;
     position: absolute;
+    padding: var(--padding-large) var(--padding-big);
+    @media only screen and (max-width: 1200px) {
+      padding: var(--padding-big) var(--padding-small);
+    }
     h3 {
       color: #fff;
-      font-size: 1.6rem;
     }
     h1 {
       color: #fff;
-      font-size: 3.4rem;
     }
   }
 }

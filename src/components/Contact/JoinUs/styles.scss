@@ -1,71 +1,44 @@
 /** @format */
 @import "../../../styles/common.scss";
 
-.joinus {
-  width: 100%;
-  &--container {
-    width: var(--width-content);
-    margin: auto;
-    padding: var(--padding-extra-large) 0;
-    @include responsive(tab-port) {
-      padding: var(--padding-large) 0;
-    }
-    p {
-      font-size: 1.6rem;
-      color: var(--black-color-1);
-      padding-bottom: var(--padding-medium);
-      @include responsive(phone) {
+.light-grey {
+  background: var(--light-grey-color-1);
+}
+
+#joinus {
+  .flex-1 {
+    &:nth-child(1) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @media only screen and (max-width: 640px) {
         text-align: center;
       }
-    }
-    &--flex {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-bottom: var(--padding-medium);
-      border-bottom: 1px solid var(--border-color);
-      @include responsive(phone) {
-        flex-direction: column;
-        border: none;
-      }
-      h1 {
-        color: var(--black-color-1);
-        font-size: 4rem;
-        font-weight: bold;
-      }
-      a {
-        @include responsive(phone) {
-          margin-top: var(--margin-medium);
-          width: 100%;
-        }
-        button {
-          background: var(--red-color-1);
-          width: inherit;
-          font-weight: bold;
-          color: #fff;
-          padding: var(--padding-small);
-          border: 0;
-          border-radius: 3px;
-          cursor: pointer;
-          font-size: 1.6rem;
-        }
-      }
-    }
-    &--text {
-      padding-top: var(--padding-medium);
-      p {
-        font-size: 1.6rem;
-        color: var(--black-color-5);
-        br {
-          @include responsive(phone) {
-            display: none;
-          }
-        }
+      h2 {
+        margin-top: 10px;
+        margin-bottom: 0;
       }
     }
   }
-}
-
-.light-grey {
-  background: var(--light-grey-color-1);
+  a {
+    @media only screen and (max-width: 640px) {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+  }
+  button {
+    border-radius: 3px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 14px;
+    background: var(--red-color-1);
+    width: 100%;
+    text-transform: none;
+  }
+  hr {
+    @media only screen and (max-width: 640px) {
+      display: none;
+    }
+  }
 }

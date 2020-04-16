@@ -15,7 +15,7 @@ const reviews = [
       "It was really a pleasure to work with the team @DI, with emphasis on their code quality and deliverability.",
     name: "Stacey Aniston",
     workingTitle: "Project Manager, IAI",
-    image: image1
+    image: image1,
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const reviews = [
       "Lorem ipsum, lorem ipsum,Lorem ipsum, lorem ipsum,Lorem ipsum, lorem ipsum,Lorem ipsum, lorem ipsum,",
     name: "Dusan Dusan",
     workingTitle: "Project Manager, IAI",
-    image: image1
+    image: image1,
   },
   {
     id: 3,
@@ -33,14 +33,14 @@ const reviews = [
       "Lorem ipsum, lorem ipsum,Lorem ipsum, lorem ipsum,Lorem ipsum, lorem ipsum,Lorem ipsum, lorem ipsum,",
     name: "Uros Uros",
     workingTitle: "Project Manager, IAI",
-    image: image1
-  }
+    image: image1,
+  },
 ];
 
 const Reviews = () => {
   const [review, setReview] = useState(0);
 
-  const handleSlider = e => {
+  const handleSlider = (e) => {
     if (e === "up") {
       if (review === reviews.length - 1) {
         return setReview(0);

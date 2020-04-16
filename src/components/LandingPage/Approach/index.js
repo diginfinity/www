@@ -4,28 +4,35 @@ import React from "react";
 import "./styles.scss";
 
 const Approach = () => (
-  <div id="approach" className="approach">
-    <div className="approach--title">
-      <p>The digital agency with a human approach</p>
-      <h1>
+  <section id="approach">
+    <div className="uk-container section-container uk-container-large">
+      <div className="uk-padding-large">
+      <p className="uk-text-lead">The digital agency with a human approach</p>
+      <h1 className="uk-heading-large">
         Crafting digital <br /> products to help <br /> startups grow.
       </h1>
     </div>
-    <div className="approach--flex">
-      <div className="approach--flex--img">
-        {/* <img src={bg_img1} alt="bg_img" width="auto" height="400" /> */}
-      </div>
-      <div className="approach--flex--note">
-        <div className="approach--flex--note--1">
-          <h1>We believe that our works can contribute to a better world.</h1>
-          <h6>+ Website and mobile app development</h6>
-          <h6>+ Dedicating teams and people</h6>
-          <h6>+ User experience and design</h6>
-        </div>
-        <div className="approach--flex--note--2" />
-      </div>
     </div>
-  </div>
+    <div className="uk-width-1 approach-container uk-flex">
+      <div className="uk-width-1 uk-width-3-5@m image-bg" />
+      <div className="uk-width-1 uk-width-2-5@m">
+        <div className="uk-card card-red-bg uk-flex">
+          <div className="uk-width-1 uk-width-2-3@m">
+            <h1 className="uk-heading-medium">
+              We believe that our works can contribute to a better world.
+            </h1>
+            <p className="uk-text-large">
+              + Website and mobile app development
+            </p>
+            <p className="uk-text-large">+ Dedicating teams and people</p>
+            <p className="uk-text-large">+ User experience and design</p>
+          </div>
+          <div className="uk-width-1-3"></div>
+        </div>
+        </div>
+      
+    </div>
+  </section>
 );
 
 export default Approach;

@@ -1,68 +1,32 @@
 /** @format */
 @import "../../../styles/common.scss";
 
-.clients {
-  padding: var(--padding-extra-large) 0;
+#clients {
   background: var(--main-black-color);
-  @include responsive(tab-land) {
-    padding: var(--padding-large) 0;
-  }
-  &--wrapper {
-    width: var(--width-content);
-    margin: auto;
+  .partner-container {
+    min-width: 33%;
+    margin: var(--margin-medium) 0;
     display: flex;
-    @include responsive(tab-port) {
-      flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .our-clients {
+    @media only screen and (min-width: 640px) {
+      padding-right: var(--padding-large);
     }
-
-    &--1 {
-      margin-right: var(--margin-medium);
-      width: 50%;
-      @include responsive(tab-port) {
-        width: 100%;
-        margin: 0;
-      }
-      h4 {
-        border-bottom: 1px solid var(--border-color);
-        padding: var(--padding-small) 0;
-        color: #fff;
-        font-size: 1.6rem;
-      }
-      h1 {
-        font-size: 4rem;
-        color: #fff;
-        margin-top: var(--margin-medium);
-      }
+    @media only screen and (max-width: 640px) {
+      margin-bottom: var(--margin-big);
     }
-    &--2 {
-      width: 50%;
-      align-self: flex-start;
-      padding-top: var(--padding-small);
-      margin-left: var(--margin-medium);
-
-      @include responsive(tab-port) {
-        width: 100%;
-        margin: 3rem 0 0 0;
-      }
-      p {
-        font-size: 1.6rem;
-        color: var(--light-grey-color-2);
-      }
-      .logo-holder {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        justify-items: center;
-        @include responsive(tab-land) {
-          grid-template-columns: repeat(2, 1fr);
-        }
-        align-items: center;
-        img {
-          padding: var(--padding-medium);
-          @include responsive(tab-land) {
-            padding-left: 0;
-          }
-        }
-      }
+    h4 {
+      border-bottom: 1px solid var(--border-color);
+      padding: 0 0 var(--padding-small) 0;
+      color: #fff;
     }
+    h1 {
+      color: #fff;
+    }
+  }
+  p {
+    color: var(--light-grey-color-2);
   }
 }

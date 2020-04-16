@@ -1,33 +1,13 @@
 /** @format */
 
-.member {
-  display: flex;
-  align-items: center;
-  &--img {
-    width: 150px;
-    height: 150px;
-    overflow: hidden;
+#member {
+  img {
     border-radius: 50%;
-    img {
-      width: 100%;
-    }
+    max-width: 150px;
   }
-  &--name {
-    margin-left: var(--margin-medium);
-    h3 {
-      font-size: 1.6rem;
-      color: var(--black-color-5);
-      font-weight: normal;
-      padding-bottom: var(--padding-small);
-      &:first-child {
-        font-size: 1.8rem;
-        font-weight: bold;
-      }
-    }
-    &--linkedin {
-      img {
-        width: 2rem;
-      }
+  .icon {
+    img {
+      width: 30px;
     }
   }
 }

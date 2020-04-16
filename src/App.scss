@@ -27,11 +27,8 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 640px) {
     font-size: 50%;
-  }
-  @media only screen and (max-width: 480px) {
-    font-size: 40%;
   }
 }
 

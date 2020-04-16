@@ -2,123 +2,89 @@
 
 @import "../../../styles/common.scss";
 
-.form {
-  padding: var(--padding-extra-large) 0;
-  @include responsive(tab-port) {
-    padding: var(--padding-small) 0;
-  }
-  &--wrapper {
-    width: var(--width-content);
-    display: flex;
-    margin: auto;
-    @include responsive(tab-port) {
-      flex-direction: column;
+#form {
+  .form-container {
+    p {
+      color: #fff;
     }
-    &--left {
-      flex: 1;
-      div {
-        margin-bottom: var(--margin-medium);
-        p {
-          color: #fff;
-          font-size: 1.6rem;
-          margin-bottom: var(--margin-small);
-        }
-        h1 {
-          color: #fff;
-          font-size: 4rem;
+    h1 {
+      margin-top: 0;
+      color: #fff;
+    }
+    form {
+      button {
+        border-radius: 3px;
+        text-transform: capitalize;
+        background: var(--main-red-color);
+        font-weight: bold;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        @media only screen and (max-width: 640px) {
+          width: 100%;
+          padding-top: 10px;
+          padding-bottom: 10px;
         }
       }
-      .actual_form {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        grid-gap: 10px;
-        @include responsive(tab-port) {
-          grid-template-columns: 1fr;
+    }
+    .form-input-container {
+      @media only screen and (max-width: 640px) {
+        flex-direction: column;
+      }
+      div {
+        padding: var(--padding-small) var(--padding-medium) var(--padding-small)
+          0;
+        @media only screen and (max-width: 640px) {
+          padding: var(--padding-small) 0;
         }
-
         label {
           color: var(--light-grey-color-2);
-          font-size: 1.4rem;
-          display: block;
         }
         input {
-          background: var(--input-background);
-          padding: var(--padding-small);
-          border: 0;
           border-radius: 3px;
-          margin-top: 5px;
-          width: 80%;
           outline: none;
           caret-color: #fff;
           color: #fff;
-          @include responsive(tab-port) {
-            width: 100%;
-          }
+          background: var(--input-background);
+          border: 0;
         }
         select {
           background: var(--input-background);
-          padding: var(--padding-small);
           border: 0;
           border-radius: 3px;
-          margin-top: 5px;
-          width: 80%;
           outline: none;
           color: #fff;
-          @include responsive(tab-port) {
-            width: 100%;
-          }
-        }
-        select option {
-          background-color: black;
-        }
-      }
-      button {
-        background: var(--main-red-color);
-        padding: 5px 15px;
-        font-weight: bold;
-        border: 0;
-        border-radius: 3px;
-        color: #fff;
-        font-size: 1.6rem;
-        cursor: pointer;
-        @include responsive(tab-port) {
-          width: 100%;
-          padding: 10px;
-          font-size: 1.8rem;
         }
       }
     }
-    &--right {
-      flex: 1;
-      &--wrapper {
-        padding-left: var(--padding-extra-large);
-        @include responsive(tab-port) {
-          padding: var(--padding-big) 0 0 0;
+    .get-in-touch {
+      @media only screen and (min-width: 960px) {
+        padding-top: 0;
+      }
+      @media only screen and (max-width: 960px) {
+        padding-left: 0;
+      }
+      &--flex {
+        @media only screen and (min-width: 480px) and (max-width: 960px) {
+          display: flex;
         }
-        .get-in-touch {
-          margin-bottom: var(--margin-medium);
+        .item {
           p {
-            color: #fff;
-            font-size: 1.6rem;
-            margin-bottom: var(--margin-small);
-          }
-          h1 {
-            color: #fff;
-            font-size: 4rem;
-          }
-        }
-        .email_us {
-          margin-bottom: var(--margin-big);
-          p {
+            margin: 0;
             color: var(--light-grey-color-2);
-            font-size: 1.6rem;
-            margin-bottom: var(--margin-small);
           }
-          &--email {
-            color: var(--light-grey-color-2);
-            font-size: 1.6rem;
-            font-weight: bold;
+          p:nth-child(1) {
+            margin-bottom: 5px;
+          }
+          &:nth-child(2) {
+            @media only screen and (min-width: 480px) and (max-width: 960px) {
+              margin-left: 30px;
+            }
+            @media only screen and (max-width: 480px) {
+              margin-top: 20px;
+            }
+            @media only screen and (min-width: 960px) {
+              margin-top: 50px;
+            }
           }
         }
       }

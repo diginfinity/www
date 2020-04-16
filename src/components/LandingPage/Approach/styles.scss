@@ -2,102 +2,37 @@
 
 @import "../../../styles/common.scss";
 
-.approach {
-  width: 100%;
-  padding: var(--padding-extra-large) 0;
-  @include responsive(tab-land) {
-    padding: var(--padding-large) 0;
-  }
-  &--title {
-    width: var(--width-content);
-    margin: 0 auto;
-    p {
-      color: #fff;
-      font-size: 1.6rem;
-      padding-bottom: var(--padding-medium);
-    }
+#approach {
+  .section-container {
+    p,
     h1 {
       color: #fff;
-      font-size: 4rem;
     }
   }
-  &--flex {
-    display: flex;
-    align-items: center;
-    position: relative;
-    margin-top: var(--margin-medium);
-    // min-height: 400px;
-    // max-height: 600px;
-    height: 100%;
-    @include responsive(tab-port) {
+  .approach-container {
+    height: 700px;
+    @media only screen and (max-width: 940px) {
       flex-direction: column;
     }
-    &--img {
-      width: 60%;
-      height: 80%;
-      position: absolute;
-      background-image: url("../../../assets/images/bg_img1.png");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: top center;
-      @include responsive(tab-port) {
-        display: none;
-      }
-      img {
-        width: 100%;
-        height: auto;
-        max-height: 500px;
-      }
+  }
+  .image-bg {
+    height: 500px;
+    margin: auto 0;
+    background-image: url("../../../assets/images/bg_img1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+  .card-red-bg {
+    background: var(--main-red-color);
+    padding: var(--padding-extra-large) var(--padding-large);
+    height: 100%;
+    h1 {
+      color: #fff;
     }
-    &--note {
-      background: var(--main-red-color);
-      height: 100%;
-      width: 40%;
-      display: flex;
-      min-height: 700px;
-      margin-left: auto;
-      @include responsive(big-screen) {
-        width: 50%;
-        z-index: 2;
-      }
-      @include responsive(tab-port) {
-        width: 100%;
-        min-height: 0;
-        margin-top: 3rem;
-      }
-      &--1 {
-        flex: 1;
-        padding: var(--padding-extra-large);
-        padding-right: 0;
-        @include responsive(tab-land) {
-          padding: var(--padding-large);
-        }
-        @include responsive(tab-port) {
-          padding: var(--padding-large) 0;
-          width: 80%;
-          margin: auto;
-          flex: none;
-        }
-        h1 {
-          font-size: 4rem;
-          color: #fff;
-          margin-bottom: var(--margin-extra-large);
-          @include responsive(tab-port) {
-            margin-bottom: var(--margin-large);
-          }
-        }
-        h6 {
-          font-size: 1.6rem;
-          color: #fff;
-          margin: var(--margin-medium) 0;
-        }
-      }
-      &--2 {
-        flex: 1;
-        @include responsive(tab-land) {
-          display: none;
-        }
-      }
+    p {
+      color: #fff;
+      margin-top: 3rem;
     }
   }
 }

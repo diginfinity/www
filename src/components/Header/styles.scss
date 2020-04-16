@@ -5,22 +5,29 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--padding-medium);
+  padding: var(--padding-small) var(--padding-big);
   background: transparent;
   box-sizing: border-box;
   width: 100%;
   position: fixed;
 
   &--hide {
-    visibility: hidden;
-    transition: all 200ms ease-out;
-    transform: translate(0, -100%);
+    background: transparent;
+    transition: background-color 1s;
   }
   &--show {
-    visibility: visible;
-    transition: all 200ms ease-in;
-    transform: none;
+    background: #fff;
+    transition: all 1s ease-in;
+    color: black;
     z-index: 200;
+    .header--menu--button {
+      color: black !important;
+      transition: color 1s;
+    }
+    h3 {
+      color: black !important;
+      transition: color 1s;
+    }
     // background: black; // to be removed
   }
 
@@ -54,9 +61,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      cursor: pointer;
     }
     h3 {
       font-size: 2.5rem;
+      margin: 0;
       margin-left: var(--margin-medium);
       color: #fff;
       @include responsive(tab-port) {

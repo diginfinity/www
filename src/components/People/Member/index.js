@@ -2,27 +2,31 @@
 
 import React from "react";
 import linkedin_img from "../../../assets/logos/linkedin.svg";
-import digitalLogo from '../../../assets/logos/di-logo.png';
+import digitalLogo from "../../../assets/logos/di-logo.png";
 import "./styles.scss";
 
-const Member = props => {
+const Member = (props) => {
   const { name, position, imageId, linkedIn } = props.member;
   return (
-    <div className="member">
-      <div className="member--img">
-        {imageId && (
-          <img
-            src={imageId ? `http://localhost:8000/api/v1/image/${imageId}`: digitalLogo}
-            alt={name}
-          />
-        )}
+    <div
+      id="member"
+      className="uk-card uk-card-default uk-flex uk-flex-middle uk-width-1 uk-width-1-2@s uk-width-1-3@m">
+      <div>
+        <img
+          src={
+            imageId
+              ? `http://localhost:8000/api/v1/image/${imageId}`
+              : digitalLogo
+          }
+          alt={name}
+        />
       </div>
-      <div className="member--name">
-        <h3>{name}</h3>
-        <h3>{position}</h3>
+      <div>
+        <h3 className="uk-heading-small">{name}</h3>
+        <p className="uk-text-large uk-text-bold">{position}</p>
         {linkedIn !== "/" && linkedIn !== "" && (
           <a
-            className="member--name--linkedin"
+            className="icon uk-link"
             href={linkedIn}
             target="_blank"
             rel="noopener noreferrer">

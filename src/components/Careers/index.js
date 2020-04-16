@@ -33,152 +33,161 @@ const Careers = () => {
   useEffect(() => {
     digitalApi
       .get("jobs/all-job-positions")
-      .then(res => {
+      .then((res) => {
         if (res.data.length) {
           setPositions(res.data);
         }
       })
-      .catch(e => console.log(e));
+      .catch((e) => console.log(e));
   }, []);
 
   return (
-    <div>
+    <section id="careers">
       {Header({ dark: true })}
-      <div className="careers">
-        <h1>Careers.</h1>
-        <p>
-          We have a strong focus on having an environment to learn and have
-          loads of fun in what we do. We believe <br /> that unless an employee
-          understands that work and professional life can bring out the best in
-          each of <br /> them, there would not be good team work.
-        </p>
-        <a href="mailto:hr@digitalinfinity.rs">
-          <button>Contact HR</button>
-        </a>
+      <div className="uk-container uk-container-large careers-container">
+        <div className="uk-padding-large">
+          <h1 className="uk-heading-large uk-text-bold">Careers.</h1>
+          <p className="uk-text-large">
+            We have a strong focus on having an environment to learn and have
+            loads of fun in what we do. We believe <br /> that unless an
+            employee understands that work and professional life can bring out
+            the best in each of <br /> them, there would not be god team work.
+          </p>
+          <a href="mailto:hr@digitalinfinity.rs">
+            <button className="uk-button">Contact HR</button>
+          </a>
+        </div>
       </div>
-      <div className="careers--bg-image">
-        <div className="careers--bg-image--flex">
-          <div className="careers--bg-image--flex--abs1">
-            <div className="header--flex">
-              <div className="figure">
-                <div className="figure--wrapper">
-                  <span className="figure--wrapper--dots" />
-                  <span className="figure--wrapper--dots" />
-                  <span className="figure--wrapper--dots" />
+      <div className="uk-width-1 careers-bg-img">
+        <div className="uk-flex dots-wrapper">
+          <div className="uk-width-1-2">
+            <div className="uk-padding employees-container">
+              <div className="uk-flex uk-flex-middle">
+                <div className="figure">
+                  <div className="figure--wrapper">
+                    <span className="figure--wrapper--dots" />
+                    <span className="figure--wrapper--dots" />
+                    <span className="figure--wrapper--dots" />
+                  </div>
+                  <div className="figure--wrapper">
+                    <span className="figure--wrapper--dots" />
+                    <span className="figure--wrapper--dots" />
+                    <span className="figure--wrapper--dots" />
+                  </div>
+                  <div className="figure--wrapper">
+                    <span className="figure--wrapper--dots" />
+                    <span className="figure--wrapper--dots" />
+                    <span className="figure--wrapper--dots" />
+                  </div>
+                  <div className="figure--wrapper">
+                    <span className="figure--wrapper--transparent" />
+                    <span className="figure--wrapper--dots" />
+                    <span className="figure--wrapper--transparent" />
+                  </div>
                 </div>
-                <div className="figure--wrapper">
-                  <span className="figure--wrapper--dots" />
-                  <span className="figure--wrapper--dots" />
-                  <span className="figure--wrapper--dots" />
-                </div>
-                <div className="figure--wrapper">
-                  <span className="figure--wrapper--dots" />
-                  <span className="figure--wrapper--dots" />
-                  <span className="figure--wrapper--dots" />
-                </div>
-                <div className="figure--wrapper">
-                  <span className="figure--wrapper--transparent" />
-                  <span className="figure--wrapper--dots" />
-                  <span className="figure--wrapper--transparent" />
-                </div>
+                <h1 className="uk-heading-medium">30+</h1>
               </div>
-              <h1>30+</h1>
+              <p className="uk-text-large">Employees and counting</p>
             </div>
-            <p>
-              Employees and <br /> counting
-            </p>
           </div>
-          <div className="careers--bg-image--flex--abs2">
-            <div className="header--flex">
-              <div className="figure">
-                <div className="figure--wrapper">
-                  <span className="figure--wrapper--dots" />
-                  <span className="figure--wrapper--dots" />
-                  <span className="figure--wrapper--dots" />
+          <div className="uk-width-1-2">
+            <div className="uk-padding projects-container">
+              <div className="uk-flex uk-flex-middle">
+                <div className="figure">
+                  <div className="figure--wrapper">
+                    <span className="figure--wrapper--dots" />
+                    <span className="figure--wrapper--dots" />
+                    <span className="figure--wrapper--dots" />
+                  </div>
+                  <div className="figure--wrapper">
+                    <span className="figure--wrapper--dots" />
+                    <span className="figure--wrapper--dots" />
+                    <span className="figure--wrapper--dots" />
+                  </div>
+                  <div className="figure--wrapper">
+                    <span className="figure--wrapper--dots" />
+                    <span className="figure--wrapper--dots" />
+                    <span className="figure--wrapper--dots" />
+                  </div>
+                  <div className="figure--wrapper">
+                    <span className="figure--wrapper--transparent" />
+                    <span className="figure--wrapper--dots" />
+                    <span className="figure--wrapper--transparent" />
+                  </div>
                 </div>
-                <div className="figure--wrapper">
-                  <span className="figure--wrapper--dots" />
-                  <span className="figure--wrapper--dots" />
-                  <span className="figure--wrapper--dots" />
-                </div>
-                <div className="figure--wrapper">
-                  <span className="figure--wrapper--dots" />
-                  <span className="figure--wrapper--dots" />
-                  <span className="figure--wrapper--dots" />
-                </div>
-                <div className="figure--wrapper">
-                  <span className="figure--wrapper--transparent" />
-                  <span className="figure--wrapper--dots" />
-                  <span className="figure--wrapper--transparent" />
-                </div>
+                <h1 className="uk-heading-medium">200+</h1>
               </div>
-              <h1>200+</h1>
+              <p className="uk-text-large">Succeeded Projects</p>
             </div>
-            <p>
-              Succeeded <br /> Projects
+          </div>
+        </div>
+      </div>
+      <div className="uk-container uk-container-large">
+        <div className="uk-padding">
+          <p className="uk-text-large">Digital agency with a human approach</p>
+          <h2 className="uk-heading-medium uk-text-bold want-to-join">
+            Want to join our <br /> growing team?
+          </h2>
+        </div>
+      </div>
+      <div className="uk-flex uk-width-1">
+        <div className="uk-width-3-5@s all-positions-bg-img" />
+        <div className="uk-width-2-5@s all-positions">
+          <div className="uk-card uk-padding-large">
+            <h2 className="uk-heading-small uk-text-bold">For all positions</h2>
+            <p className="uk-text-large">
+              + We prefer a great/interested/excited person with less experience
+              to an unmotivated or unengaged person with tons of experience.
+            </p>
+            <p className="uk-text-large">
+              + Self-management and time management are critical. Without it,
+              you will not be successful.
+            </p>
+            <p className="uk-text-large">
+              + Submit a cover letter with your resume which includes 1) why you
+              would make a great addition to our team; 2) a favorite clip from
+              YouTube; and 3) your salary requirements.
             </p>
           </div>
         </div>
       </div>
-      <div className="join-our-team">
-        <p>Digital agency with a human approach</p>
-        <h1>
-          Want to join our <br /> growing team?
-        </h1>
-      </div>
-      <div className="flex--wrapper">
-        <div className="flex--wrapper--bgimg" />
-        <div className="flex--wrapper--positions">
-          <div className="flex--wrapper--positions--text">
-            <h1>For all positions</h1>
-            <p>
-              + We prefer a great/interested/excited person <br /> with less
-              experience to an unmotivated or <br /> unengaged person with tons
-              of experience
-            </p>
-            <p>
-              + Self-management and time management are <br /> critical. Without
-              it, you will not be successful.
-            </p>
-            <p>
-              + Submit a cover letter with your resume which <br /> includes 1)
-              why you would make a great addition <br /> to our team; 2) a
-              favorite clip from YouTube; and <br /> 3) your salary
-              requirements.
-            </p>
+      <div className="uk-container uk-container-large">
+        <div className="uk-padding">
+          <h1 className="uk-heading-medium">Opened positions</h1>
+          <div className="uk-padding uk-padding-remove-left uk-padding-remove-right">
+            {positions.length ? (
+              positions.map((p, index) => <Position key={index} position={p} />)
+            ) : (
+              <div>
+                <h4>We currently have no open positions</h4>
+              </div>
+            )}
           </div>
-        </div>
-      </div>
-      <div id="open-positions" className="open--positions">
-        <h1>Opened positions</h1>
-        {positions.length ? (
-          positions.map((p, index) => <Position key={index} position={p} />)
-        ) : (
-          <div>
-            <h4>We currently have no open positions</h4>
-          </div>
-        )}
-      </div>
-      <div className="hr">
-        <div className="hr--flex-container">
-          <div className="hr--flex-container--hr-wrapper">
-            <div className="hr--flex-container--hr-wrapper--img-wrapper">
-              <img src={hrImg} alt="Jovana_HR" />
+          <hr />
+          <div className="uk-flex uk-width-1">
+            <div className="uk-flex uk-flex-middle uk-width-1">
+              <div className="hr-img-container">
+                <img src={hrImg} alt="Jovana_HR" />
+              </div>
+              <div className="uk-flex uk-flex-wrap uk-flex-between uk-flex-middle uk-width-1 more-info">
+                <div className="hr-info">
+                  <h3 className="uk-heading-small">Jovana Stajcic</h3>
+                  <p className="uk-text-large">HR manager</p>
+                </div>
+                <div className="company-info">
+                <p className="uk-text-large uk-text-bold">
+                hr@digitalinfinity.rs
+              </p>
+              <p className="uk-text-large">Ph: +381 21 300 2956</p>
+                </div>
+              </div>
             </div>
-            <div className="hr--flex-container--hr-wrapper--name-wrapper">
-              <h3>Jovana Stajcic</h3>
-              <h4>HR manager</h4>
-            </div>
-          </div>
-          <div className="hr--flex-container--contact">
-            <p>hr@digitalinfinity.rs</p>
-            <p>Ph: +381 21 300 2956</p>
           </div>
         </div>
       </div>
       {Internship()}
       {Footer()}
-    </div>
+    </section>
   );
 };
 

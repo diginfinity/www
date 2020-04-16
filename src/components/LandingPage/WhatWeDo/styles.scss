@@ -1,71 +1,26 @@
 /** @format */
 @import "../../../styles/common.scss";
 
-.whatwedo {
-  &--wrapper {
-    display: flex;
-    margin: 0 auto;
-    padding: var(--padding-extra-large) 0;
-    justify-content: center;
-    align-items: center;
-    width: var(--width-content);
-    @include responsive(tab-land) {
-      padding: var(--padding-large) 0;
-    }
-    @include responsive(tab-port) {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    &--1 {
-      // width: 35%;
-      width: 50%;
-      margin-right: var(--margin-medium);
-      @include responsive(tab-land) {
-        width: 100%;
-        margin: 0;
-      }
-      h4 {
-        border-bottom: 1px solid var(--border-color);
-        padding: var(--padding-small) 0;
-        color: #fff;
-        font-size: 1.6rem;
-      }
-      h1 {
-        font-size: 4rem;
-        color: #fff;
-        margin-top: var(--margin-medium);
-        line-height: 5.5rem;
-      }
-    }
-    &--2 {
-      width: 50%;
-      align-self: flex-start;
-      padding-top: var(--padding-small);
-      margin-left: var(--margin-medium);
-      @include responsive(tab-land) {
-        width: 100%;
-        margin: 3rem 0 0 0;
-        padding-left: var(--padding-medium);
-      }
-      @include responsive(tab-port) {
-        padding-left: 0;
-      }
-      p {
-        font-size: 1.6rem;
-        color: var(--light-grey-color-2);
-        line-height: 2.2rem;
-      }
+#whatwedo {
+  .what-we-do {
+    @media only screen and (min-width: 640px) {
+      padding-right: var(--padding-large);
     }
   }
-  &--items {
-    display: grid;
-    position: relative;
-    grid-template-columns: repeat(4, 1fr);
-    @include responsive(tab-land) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @include responsive(tab-port) {
-      grid-template-columns: 1fr;
+  h4 {
+    border-bottom: 1px solid var(--border-color);
+    padding: var(--padding-small) 0;
+    color: #fff;
+  }
+  h1 {
+    color: #fff;
+    margin-top: var(--margin-medium);
+  }
+  p {
+    color: var(--light-grey-color-2);
+    margin-top: var(--margin-medium);
+    @media only screen and (max-width: 640px) {
+      margin-top: 0;
     }
   }
 }
