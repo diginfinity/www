@@ -1,7 +1,7 @@
 /** @format */
 
 import React from "react";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import "./styles.scss";
 
 import logo1 from "../../assets/logos/logo1.png";
@@ -48,8 +48,8 @@ const AboutUs = () => {
         <div className="uk-container uk-container-large">
           <div className="uk-padding-large">
             <div className="uk-width-1">
-              <div className="uk-width-1 uk-flex">
-                <div className="card-container">
+              <div className="uk-width-1 uk-flex uk-flex-wrap">
+                <div className="card-container uk-width-1 uk-width-1-2@s">
                   <div className="uk-flex uk-flex-middle icon-container">
                     <div className="figure">
                       <div className="figure--wrapper">
@@ -88,7 +88,7 @@ const AboutUs = () => {
                     </p>
                   </div>
                 </div>
-                <div className="card-container">
+                <div className="card-container uk-width-1 uk-width-1-2@s">
                   <div className="uk-flex uk-flex-middle icon-container">
                     <div className="figure">
                       <div className="figure--wrapper">
@@ -175,7 +175,9 @@ const AboutUs = () => {
                 </h3>
               </div>
               <div className="uk-width-1 uk-width-1-2@s uk-flex uk-flex-right uk-flex-middle">
+                <Link smooth to="/contact#contact">
                 <button className="uk-button">Contact us</button>
+                </Link>
               </div>
             </div>
             <hr />

@@ -51,9 +51,6 @@
   .nav {
     padding: var(--padding-extra-large) var(--padding-medium);
     height: 70%;
-    @include responsive(tab-land) {
-      padding: var(--padding-big) 0;
-    }
     @include responsive(tab-port) {
       padding: var(--padding-medium) 0;
       display: flex;
@@ -64,7 +61,7 @@
     }
     & > * {
       @include responsive(tab-port) {
-        padding: var(--padding-big) 0;
+        padding: var(--padding-medium) 0;
       }
     }
     &--item-animate {
@@ -101,13 +98,19 @@
       sup {
         display: none;
       }
-      padding-left: var(--padding-large);
       color: var(--light-grey-color-3);
+      padding-left: var(--padding-large);
+      @media only screen and (max-width: 760px) {
+        padding-left: 0;
+      }
     }
     &--about {
       display: flex;
       position: relative;
       align-items: center;
+      @media only screen and (max-width: 760px) {
+        flex-direction: column;
+      }
       &--expand {
         margin-left: var(--margin-extra-large);
         font-size: 1.6rem;
@@ -127,6 +130,8 @@
         left: 30%;
         top: 0;
         @include responsive(tab-port) {
+          margin-top: 30px;
+          padding-left: 30px;
           position: relative;
         }
       }

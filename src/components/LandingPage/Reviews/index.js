@@ -68,7 +68,7 @@ const Reviews = () => {
       <div className="reviews--wrapper">
         <div className="reviews--wrapper--review">
           <div className="reviews--wrapper--review--opacity" />
-          <div className="reviews--wrapper-review--flex">
+          <div className="reviews--wrapper--review--flex">
             {reviews.map((r, index) => (
               <div
                 id={`section${index + 1}`}
