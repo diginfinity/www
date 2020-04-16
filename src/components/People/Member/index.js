@@ -6,22 +6,24 @@ import digitalLogo from "../../../assets/logos/di-logo.png";
 import "./styles.scss";
 
 const Member = (props) => {
-  const { name, position, imageId, linkedIn } = props.member;
+  const { name, position, img, linkedIn } = props.member;
+  console.log(props.member)
   return (
     <div
       id="member"
       className="uk-card uk-card-default uk-flex uk-flex-middle uk-width-1 uk-width-1-2@s uk-width-1-3@m">
       <div>
         <img
-          src={
-            imageId
-              ? `http://localhost:8000/api/v1/image/${imageId}`
-              : digitalLogo
-          }
+        src={img}
+          // src={
+          //   imageId
+          //     ? `http://localhost:8000/api/v1/image/${imageId}`
+          //     : digitalLogo
+          // }
           alt={name}
         />
       </div>
-      <div>
+      <div className="member-info">
         <h3 className="uk-heading-small">{name}</h3>
         <p className="uk-text-large uk-text-bold">{position}</p>
         {linkedIn !== "/" && linkedIn !== "" && (

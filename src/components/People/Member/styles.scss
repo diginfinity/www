@@ -1,13 +1,26 @@
 /** @format */
 
 #member {
+  padding: var(--padding-small);
   img {
     border-radius: 50%;
-    max-width: 150px;
+    width: 100px;
+    height: 100px;
   }
   .icon {
     img {
       width: 30px;
+      height: 30px;
+      margin: 0 10px;
+    }
+  }
+  .member-info {
+    h3,
+    p {
+      margin: 5px 10px;
+    }
+    h3 {
+      font-size: 2rem;
     }
   }
 }

@@ -1,9 +1,8 @@
 /** @format */
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./styles.scss";
 
-import { digitalApi } from "../../api";
 //components
 import Header from "../Header";
 import Internship from "../Careers/Internship";
@@ -12,54 +11,54 @@ import JoinUs from "../Contact/JoinUs";
 
 import Member from "./Member";
 
-// const members = [
-//   {
-//     id: 1,
-//     name: "Milos Jovanov",
-//     title: "Senior software developer",
-//     imageId: people
-//   },
-//   {
-//     id: 2,
-//     name: "Milos Milos",
-//     title: "Senior software developer",
-//     imageId: people
-//   },
-//   {
-//     id: 3,
-//     name: "Marko Marko",
-//     title: "Senior software developer",
-//     imageId: people
-//   },
-//   {
-//     id: 4,
-//     name: "Dusan Dusan",
-//     title: "Senior software developer",
-//     imageId: people
-//   },
-//   {
-//     id: 5,
-//     name: "Lazar Lazar",
-//     title: "Senior software developer",
-//     imageId: people
-//   },
-//   {
-//     id: 6,
-//     name: "Jovan Jovan",
-//     title: "Senior software developer",
-//     imageId: people
-//   }
-// ];
+import goran from './people_img/goran.jpg';
+import ivan from './people_img/ivan.jpg';
+import jovan from './people_img/jovan.jpg';
+import marko_cekic from './people_img/marko2.jpg';
+import marko from './people_img/marko.jpg';
+import uros from './people_img/uros.jpg';
+
+const members = [
+  {
+    name: 'Goran Krgović',
+    position: 'CEO',
+    img: goran,
+    linkedIn: 'https://www.linkedin.com/in/gorankrgovic/'
+  },
+  {
+    name: 'Ivan Kiš',
+    position: 'Front End Developer',
+    img: ivan,
+    linkedIn: 'https://www.linkedin.com/in/ivan-ki%C5%A1/'
+  },
+  {
+    name: 'Jovan Djukić',
+    position: 'Front End Developer',
+    img: jovan,
+    linkedIn: 'https://www.linkedin.com/in/jovandj/'
+  },
+  {
+    name: 'Marko Čekić',
+    position: 'Front End Developer',
+    img: marko_cekic,
+    linkedIn: 'https://www.linkedin.com/in/cekicm/'
+  },
+  {
+    name: 'Marko Popović',
+    position: 'Front End Developer',
+    img: marko,
+    linkedIn: 'https://www.linkedin.com/in/marko-popovic-02311818a/'
+  },
+  {
+    name: 'Uroš Teofanović',
+    position: 'Front End Developer',
+    img: uros,
+    linkedIn: 'https://www.linkedin.com/in/uro%C5%A1-teofanovi%C4%87/'
+  },
+
+];
 
 const People = () => {
-  const [people, setPeople] = useState([]);
-
-  useEffect(() => {
-    digitalApi
-      .get("employees/all-employees")
-      .then((res) => setPeople(res.data))
-      .catch((e) => console.log(e));
-  }, []);
   return (
     <section id="members">
       {Header({ dark: true })}
@@ -70,7 +69,7 @@ const People = () => {
             Great thinkers, good creators and excellent companions.
           </p>
           <div className="uk-width-1 uk-flex uk-flex-wrap">
-            {people.map((p) => (
+            {members.map((p) => (
               <Member member={p} key={p._id} />
             ))}
           </div>
