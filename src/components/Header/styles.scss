@@ -20,6 +20,7 @@
     transition: all 1s ease-in;
     color: black;
     z-index: 200;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     .header--menu--button {
       color: black !important;
       transition: color 1s;
