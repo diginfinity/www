@@ -2,7 +2,7 @@
 
 import React from "react";
 import linkedin_img from "../../../assets/logos/linkedin.svg";
-import digitalLogo from "../../../assets/logos/di-logo.png";
+// import digitalLogo from "../../../assets/logos/di-logo.png";
 import "./styles.scss";
 
 const Member = (props) => {

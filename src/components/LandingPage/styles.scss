@@ -31,6 +31,10 @@
         font-size: 7rem;
         line-height: 7.2rem;
       }
+      @include responsive(phone) {
+        font-size: 6rem;
+        line-height: 6.2rem;
+      }
       span {
         color: var(--black-color-2);
         font-size: inherit;
@@ -73,6 +77,12 @@
     transform: rotate(-30deg);
     top: -55rem;
     left: -17rem;
+    @include responsive(tab-port) {
+      font-size: 40rem;
+      line-height: 25rem;
+      top: -35%;
+      left: -20%;
+    }
     &::selection {
       color: none;
       background: none;

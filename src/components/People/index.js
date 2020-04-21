@@ -13,10 +13,10 @@ import Member from "./Member";
 
 import goran from './people_img/goran.jpg';
 import ivan from './people_img/ivan.jpg';
-import jovan from './people_img/jovan.jpg';
+import jovan from './people_img/jovan.png';
 import marko_cekic from './people_img/marko2.jpg';
 import marko from './people_img/marko.jpg';
-import uros from './people_img/uros.jpg';
+import uros from './people_img/uros.png';
 
 const members = [
   {

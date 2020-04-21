@@ -41,7 +41,7 @@ const WhatWeDo = () => {
   console.log(whatWeDoItems);
   return (
     <section id="whatwedo">
-      <div className="uk-container uk-container-large whatwedo-container uk-padding">
+      <div className="uk-container uk-container-large whatwedo-container">
         <div className="uk-padding-large">
         <div className="uk-container">
           <div className="uk-width-1  uk-flex uk-flex-wrap">

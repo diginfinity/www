@@ -4,6 +4,15 @@
 #careers {
   .careers-container {
     padding-top: 70px;
+
+    .emailhr {
+      border-radius: 3px;
+      background: var(--red-color-1);
+      color: #fff;
+      font-size: 1.4rem;
+      text-transform: none;
+      font-weight: bold;
+    }
   }
   .careers-bg-img {
     height: 400px;

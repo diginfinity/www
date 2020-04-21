@@ -54,7 +54,7 @@ const Careers = () => {
             the best in each of <br /> them, there would not be god team work.
           </p>
           <a href="mailto:hr@digitalinfinity.rs">
-            <button className="uk-button">Contact HR</button>
+            <button className="uk-button emailhr">Contact HR</button>
           </a>
         </div>
       </div>

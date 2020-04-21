@@ -25,7 +25,7 @@ const Footer = () => {
           <div className="uk-flex uk-width-1-4@m">
             <div className="flex-responsive">
               <div className="uk-card uk-margin-top footer-card">
-                <h5 className="uk-card-title">Novi Sad</h5>
+                <h5>Novi Sad</h5>
                 <p className="uk-text-large">Bulevar Kralja Petra I 89,</p>
                 <p className="uk-text-large">PAK code: 401245</p>
                 <p className="uk-text-large">Serbia</p>
@@ -41,7 +41,7 @@ const Footer = () => {
           <div className="uk-flex uk-width-1-4@m">
             <div className="flex-responsive">
               <div className="uk-card uk-margin-top footer-card">
-                <h5 className="uk-card-title">Work inquiries</h5>
+                <h5>Work inquiries</h5>
                 <p className="uk-text-large">Interested in working with us?</p>
                 <p className="uk-text-large">ask@digitalinfinity.rs</p>
               </div>
@@ -54,7 +54,7 @@ const Footer = () => {
           </div>
           <div className="uk-flex uk-width-1-4@m">
             <div className="uk-card uk-margin-top footer-card">
-              <h5 className="uk-card-title">Company info</h5>
+              <h5>Company info</h5>
               <div className="responsive-info">
                 <div className="uk-card uk-margin-top uk-margin-bottom">
                   <p className="uk-text-large">DIGITAL INFINITY DOO Novi Sad</p>
