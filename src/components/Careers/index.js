@@ -59,8 +59,9 @@ const Careers = () => {
         </div>
       </div>
       <div className="uk-width-1 careers-bg-img">
-        <div className="uk-flex dots-wrapper">
-          <div className="uk-width-1-2">
+        <div className="uk-container uk-container-large container-relative">
+          <div className="uk-padding-large uk-padding-remove-bottom uk-height-1-1 container-relative--absolute">
+        <div className="uk-flex dots-wrapper uk-height-1-1">
             <div className="uk-padding employees-container">
               <div className="uk-flex uk-flex-middle">
                 <div className="figure">
@@ -89,8 +90,6 @@ const Careers = () => {
               </div>
               <p className="uk-text-large">Employees and counting</p>
             </div>
-          </div>
-          <div className="uk-width-1-2">
             <div className="uk-padding projects-container">
               <div className="uk-flex uk-flex-middle">
                 <div className="figure">
@@ -119,11 +118,12 @@ const Careers = () => {
               </div>
               <p className="uk-text-large">Succeeded Projects</p>
             </div>
-          </div>
+        </div>
+        </div>
         </div>
       </div>
       <div className="uk-container uk-container-large">
-        <div className="uk-padding">
+        <div className="uk-padding-large">
           <p className="uk-text-large">Digital agency with a human approach</p>
           <h2 className="uk-heading-medium uk-text-bold want-to-join">
             Want to join our <br /> growing team?
@@ -152,7 +152,7 @@ const Careers = () => {
         </div>
       </div>
       <div className="uk-container uk-container-large">
-        <div className="uk-padding">
+        <div className="uk-padding-large">
           <h1 className="uk-heading-medium">Opened positions</h1>
           <div className="uk-padding uk-padding-remove-left uk-padding-remove-right">
             {positions.length ? (
